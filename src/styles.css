@@ -15,7 +15,6 @@
   --color-signal-rose: #f04491;
   --color-signal-cyan: #39c6d9;
   --color-signal-coral: #ff6b5e;
-  --color-photo-underlay: #777a78;
   --color-border: #322c24;
   --color-line: #d9d1c2;
   --font-sans: "Outfit", system-ui, sans-serif;
@@ -24,6 +23,86 @@
 }
 
 @layer components {
+  .feature-joiner {
+    display: grid;
+    aspect-ratio: 1;
+    grid-template-areas:
+      "a a b c"
+      "a a d c"
+      "e f f g"
+      "h f f i";
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 0.45rem;
+    padding: 0.8rem;
+    background: var(--color-paper-2);
+    box-shadow: 0 1rem 2rem rgb(28 24 20 / 18%);
+    transform: rotate(-1deg);
+  }
+
+  .feature-joiner-tile {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--color-paper);
+    box-shadow: 0 0.2rem 0.5rem rgb(28 24 20 / 14%);
+  }
+
+  .feature-joiner-tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9);
+  }
+
+  .feature-joiner-tile:nth-child(3n + 1) {
+    transform: translateY(0.35rem) rotate(-1.5deg);
+  }
+
+  .feature-joiner-tile:nth-child(3n + 2) {
+    transform: translateY(-0.2rem) rotate(1deg);
+  }
+
+  .feature-joiner-tile:nth-child(3n) {
+    transform: translateY(0.25rem) rotate(1.5deg);
+  }
+
+  @media (min-width: 768px) {
+    .feature-joiner {
+      gap: 0.55rem;
+      padding: 1rem;
+    }
+  }
+
+  .service-audience-card {
+    background: var(--color-bg);
+  }
+
+  .service-feature-image {
+    position: relative;
+    min-height: 20rem;
+    overflow: hidden;
+    background: var(--color-surface);
+  }
+
+  .service-feature-image::after {
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(180deg, transparent, var(--color-bg));
+    content: "";
+    pointer-events: none;
+  }
+
+  .service-feature-image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+  }
+
   .signal-panel {
     position: relative;
     isolation: isolate;
@@ -83,58 +162,11 @@
     transform: skewY(-45deg);
   }
 
-  .photo-card-stack,
-  .offset-panel {
-    position: relative;
-    isolation: isolate;
-  }
-
-  .photo-card-stack::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: var(--color-photo-underlay);
-    content: "";
-    pointer-events: none;
-    transform: translate(0.75rem, 0.75rem) rotate(2.5deg);
-  }
-
-  .offset-panel::before {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
-    background: var(--color-photo-underlay);
-    content: "";
-    pointer-events: none;
-    transform: translate(0.75rem, 0.75rem) rotate(2.5deg);
-  }
-
-  .photo-card-stack > *,
-  .offset-panel > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .photo-card-stack::after,
-  .offset-panel::after {
-    position: absolute;
-    z-index: 2;
-    top: -0.75rem;
-    left: -0.75rem;
-    width: 3rem;
-    height: 3rem;
-    background: var(--color-signal-rose);
-    content: "";
-    pointer-events: none;
-    transform: rotate(12deg);
-  }
-
-  .photo-card-stack-cyan::after {
-    background: var(--color-signal-cyan);
-  }
-
-  .photo-card-stack-coral::after {
-    background: var(--color-signal-coral);
+  @media (max-width: 640px) {
+    .service-feature-image {
+      min-height: 0;
+      aspect-ratio: 4 / 3;
+    }
   }
 }
 

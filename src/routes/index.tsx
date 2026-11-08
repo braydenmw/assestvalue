@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, ClipboardCheck, FileSearch, Landmark, Scale } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -8,32 +8,26 @@ const STEPS = [
   {
     n: "01",
     t: "Identify the complete vehicle",
-    d: "Record the donor or original vehicle, chassis identity, factory specification, current build, edition, mileage and provenance.",
   },
   {
     n: "02",
     t: "Understand what changed",
-    d: "Trace coachbuilding, tuning, restoration or restomod work through build records, invoices, certificates and photographs.",
   },
   {
     n: "03",
     t: "Define the relevant market",
-    d: "Consider where this vehicle could realistically sell, including specialist, domestic and cross-border markets where relevant.",
   },
   {
     n: "04",
     t: "Research comparable evidence",
-    d: "Use relevant completed transactions where available. For rare builds, explain the limits of the evidence and why each comparison was selected.",
   },
   {
     n: "05",
     t: "Assess condition and context",
-    d: "Review inspection findings, storage, documentation, market access and assignment-specific duty or tax assumptions.",
   },
   {
     n: "06",
     t: "Explain the conclusion",
-    d: "Present the valuation basis, evidence, adjustments, assumptions and limitations in a report prepared for its stated purpose.",
   },
 ];
 
@@ -57,55 +51,37 @@ function Home() {
       </header>
 
       <main id="top">
-        <section className="relative isolate overflow-hidden border-b border-border bg-bg">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-0 w-full md:w-[68%]"
-          >
-            <img
-              src="/cars/hero-painterly-coachbuilt.png"
-              alt=""
-              className="h-full w-full object-cover object-[center_45%] opacity-100"
-              fetchPriority="high"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-bg/5 via-bg/20 to-bg/95" />
-            <div className="absolute inset-0 bg-gradient-to-b from-bg/15 via-transparent to-bg/45 md:hidden" />
-          </div>
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rotate-45 border border-signal-cyan/20"
-          />
-          <div className="mx-auto flex max-w-7xl justify-end px-5 py-16 md:px-10 md:py-24">
-            <div className="relative z-10 w-full max-w-2xl text-right">
-              <p className="mb-5 flex items-center justify-end gap-3 text-xs font-medium uppercase tracking-[0.22em] text-primary">
-                Purpose-led valuation for rare and transformed vehicles
+        <section className="border-b border-border bg-bg">
+          <div className="mx-auto grid max-w-7xl items-stretch px-5 md:grid-cols-[1.08fr_0.92fr] md:px-10">
+            <figure className="relative -mx-5 h-72 overflow-hidden sm:h-96 md:mx-0 md:h-auto md:min-h-[42rem]">
+              <img
+                src="/cars/hero-painterly-coachbuilt.png"
+                alt="Illustration of a distinctive coachbuilt sports car"
+                className="h-full w-full object-cover object-[center_45%]"
+                fetchPriority="high"
+              />
+              <figcaption className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.18em] text-fg/80 md:bottom-6 md:left-6">
+                Rare and transformed vehicles
+              </figcaption>
+            </figure>
+            <div className="flex flex-col justify-center py-12 md:pl-12 md:pr-4 md:py-20">
+              <p className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-primary">
                 <span className="h-px w-8 bg-primary" />
+                Purpose-led valuation
               </p>
-              <h1 className="ml-auto max-w-2xl font-display text-5xl leading-[0.98] text-fg text-balance sm:text-6xl lg:text-7xl">
-                When the car is one of one, the valuation should see the whole story.
+              <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[0.98] text-fg text-balance sm:text-6xl lg:text-7xl">
+                When the car is one of one, see the whole story.
               </h1>
-              <p className="ml-auto mt-7 max-w-lg text-base leading-relaxed text-fg/90 md:text-lg">
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-fg/85 md:text-lg">
                 ADVERSIQ prepares specialist valuations for complex vehicle assignments—from desktop
                 evidence reviews to agreed on-site inspections and cross-border matters. Each brief
                 connects identity, provenance, condition and relevant market evidence to a defined
-                valuation question for clients, insurers, advisers and authorities.
+                valuation question.
               </p>
-              <p className="mt-10 border-t border-border pt-4 text-xs uppercase tracking-[0.18em] text-muted">
-                Melbourne based <span className="mx-2 text-primary">/</span> International market
-                context
+              <p className="mt-10 border-t border-border pt-5 text-[10px] uppercase tracking-[0.16em] text-muted sm:text-xs">
+                Melbourne, Australia <span className="mx-2 text-primary">/</span> International
+                market context
               </p>
-              <div className="mt-8 border-r border-primary pr-4">
-                <p className="text-xs uppercase tracking-[0.18em] text-primary">
-                  When the market sees only a base model
-                </p>
-                <p className="ml-auto mt-2 max-w-md font-display text-2xl leading-snug text-fg">
-                  The original specification may tell only part of the story.
-                </p>
-                <p className="ml-auto mt-2 max-w-md text-sm leading-relaxed text-fg/80">
-                  Coachbuilt, modified and reimagined cars need their identity, work and buyer
-                  market understood together.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -115,7 +91,7 @@ function Home() {
             <div className="grid gap-8 md:grid-cols-[0.75fr_1.25fr] md:items-end">
               <div>
                 <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-ink">
-                  <span className="h-px w-8 bg-signal-rose" />
+                  <span className="h-px w-8 bg-primary" />
                   Why ordinary guides can miss the point
                 </p>
                 <h2 className="mt-4 max-w-md font-display text-4xl leading-tight text-balance md:text-5xl">
@@ -129,65 +105,91 @@ function Home() {
                 <p className="mb-4 text-xs uppercase tracking-[0.18em] text-muted-ink">
                   Marques &amp; specialist builds
                 </p>
-                <div className="grid grid-cols-2 gap-x-5 gap-y-0 sm:grid-cols-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4">
                   {[
-                    ["F", "Ferrari"],
-                    ["P", "Porsche"],
-                    ["MB", "Mercedes-Benz"],
-                    ["AM", "Aston Martin"],
-                    ["L", "Lamborghini"],
-                    ["S", "Singer"],
-                    ["M", "Mansory"],
-                    ["B", "Brabus"],
-                  ].map(([mark, name]) => (
+                    "Ferrari",
+                    "Porsche",
+                    "Mercedes-Benz",
+                    "Aston Martin",
+                    "Lamborghini",
+                    "Singer",
+                    "Mansory",
+                    "Brabus",
+                  ].map((name) => (
                     <div
                       key={name}
-                      className="flex min-h-14 items-center gap-3 border-b border-line py-3"
+                      className="flex min-h-14 items-center border-b border-line py-3 pr-3 font-display text-base sm:text-lg"
                     >
-                      <span
-                        aria-hidden="true"
-                        className="flex size-8 shrink-0 items-center justify-center border border-line font-display text-xs text-muted-ink"
-                      >
-                        {mark}
-                      </span>
-                      <span className="text-xs font-medium leading-tight sm:text-sm">{name}</span>
+                      {name}
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            <div className="mt-14 grid gap-8 border-t border-line pt-8 md:grid-cols-3 md:gap-10">
-              {[
-                [
-                  "A base model is not the whole build",
-                  "A stock supercar may have a documented coachbuilder conversion. An older chassis may have been comprehensively rebuilt into a modern performance car. The original listing may not describe what exists now.",
-                ],
-                [
-                  "Import calculations are not market evidence",
-                  "Customs values, duties and taxes depend on local rules and declared facts. A calculation can differ from what a specialist buyer would pay—and neither should be mistaken for the other.",
-                ],
-                [
-                  "Rare does not mean easy to price",
-                  "Few close sales, unclear provenance or limited buyer demand can make both high and low estimates hard to defend. Build cost alone does not establish market value.",
-                ],
-              ].map(([t, d], index) => (
-                <article key={t} className="relative">
-                  <span
-                    className={`font-display text-sm ${index === 1 ? "text-primary" : index === 2 ? "text-signal-coral" : "text-signal-rose"}`}
-                  >
-                    0{index + 1}
-                  </span>
-                  <h3 className="mt-3 max-w-xs font-display text-2xl leading-snug">{t}</h3>
-                  <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-ink">{d}</p>
-                </article>
-              ))}
+            <div className="mt-14 border-t border-line">
+              <div className="grid gap-8 pt-8 md:grid-cols-2 md:items-center md:gap-12 md:pt-12">
+                <div className="feature-notes order-2 divide-y divide-line md:order-1">
+                  {[
+                    {
+                      title: "A base model is not the whole build",
+                      description:
+                        "A stock supercar may have a documented coachbuilder conversion. An older chassis may have been comprehensively rebuilt into a modern performance car. The original listing may not describe what exists now.",
+                    },
+                    {
+                      title: "Import calculations are not market evidence",
+                      description:
+                        "Customs values, duties and taxes depend on local rules and declared facts. A calculation can differ from what a specialist buyer would pay—and neither should be mistaken for the other.",
+                    },
+                    {
+                      title: "Rare does not mean easy to price",
+                      description:
+                        "Few close sales, unclear provenance or limited buyer demand can make both high and low estimates hard to defend. Build cost alone does not establish market value.",
+                    },
+                  ].map(({ title, description }, index) => (
+                    <article key={title} className="py-6 first:pt-0 last:pb-0">
+                      <span className="font-display text-sm text-primary">0{index + 1}</span>
+                      <h3 className="mt-2 max-w-sm font-display text-2xl leading-snug">{title}</h3>
+                      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-ink">
+                        {description}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+                <figure
+                  className="feature-joiner order-1 md:order-2"
+                  role="img"
+                  aria-label="A photographic joiner collage made from the supplied exotic-car lineup"
+                >
+                  {[
+                    { area: "a", position: "8% 12%" },
+                    { area: "b", position: "52% 12%" },
+                    { area: "c", position: "96% 14%" },
+                    { area: "d", position: "34% 45%" },
+                    { area: "e", position: "0% 60%" },
+                    { area: "f", position: "50% 62%" },
+                    { area: "g", position: "100% 56%" },
+                    { area: "h", position: "16% 100%" },
+                    { area: "i", position: "86% 100%" },
+                  ].map(({ area, position }) => (
+                    <span key={area} className="feature-joiner-tile" style={{ gridArea: area }}>
+                      <img
+                        src="/cars/supercar-lineup.png"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        style={{ objectPosition: position }}
+                      />
+                    </span>
+                  ))}
+                </figure>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="market-context-photo" className="bg-surface">
-          <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-[0.82fr_1.18fr] md:px-10 md:py-24">
-            <div className="order-2 md:order-1">
+          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+            <div className="max-w-3xl">
               <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-primary">
                 <span className="h-px w-8 bg-primary" />
                 When borders and assessments complicate the picture
@@ -209,123 +211,110 @@ function Home() {
                 How we approach the evidence <ArrowRight size={16} className="text-primary" />
               </a>
             </div>
-            <figure className="photo-card-stack photo-card-stack-cyan order-1 md:order-2">
-              <img
-                src="/cars/green-hypercar-estate.jpg"
-                alt="A specialist green performance car outside a contemporary estate"
-                loading="lazy"
-                className="h-72 w-full object-cover md:h-[31rem]"
-              />
-            </figure>
           </div>
         </section>
 
         <section id="method" className="bg-paper text-ink">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
-            <div className="grid gap-8 border-b border-border pb-10 md:grid-cols-[0.75fr_1.25fr] md:items-end">
+            <div className="pb-10">
               <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-primary">
                 <span className="h-px w-8 bg-primary" />
                 How we approach a valuation
               </p>
-              <h2 className="max-w-3xl font-display text-4xl leading-tight text-balance md:text-5xl">
-                Understand the build. Research the market. Show the reasoning.
+              <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-balance md:text-5xl">
+                A considered valuation starts by understanding what matters.
               </h2>
             </div>
-            <div className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
-              {STEPS.map((s, index) => (
-                <article key={s.n} className="border-b border-border py-7 md:py-9">
-                  <p
-                    className={`font-display text-3xl ${index % 3 === 1 ? "text-primary" : index % 3 === 2 ? "text-signal-coral" : "text-signal-rose"}`}
+            <div className="grid gap-12 border-t border-line pt-8 md:grid-cols-2 md:gap-16">
+              <div className="border-b border-line">
+                {STEPS.map((s) => (
+                  <article
+                    key={s.n}
+                    className="grid grid-cols-[3rem_1fr] items-baseline gap-3 border-b border-line py-5 last:border-b-0 md:grid-cols-[4rem_1fr] md:gap-6 md:py-6"
                   >
-                    {s.n}
-                  </p>
-                  <h3 className="mt-4 font-display text-2xl">{s.t}</h3>
-                  <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-ink">{s.d}</p>
-                </article>
-              ))}
+                    <p className="font-display text-sm text-primary">{s.n}</p>
+                    <h3 className="font-display text-xl md:text-2xl">{s.t}</h3>
+                  </article>
+                ))}
+              </div>
+              <aside className="flex flex-col justify-center border-l-2 border-primary pl-6 md:pl-10">
+                <p className="text-xs uppercase tracking-[0.22em] text-muted-ink">
+                  The value behind the valuation
+                </p>
+                <h3 className="mt-5 max-w-xl font-display text-3xl leading-tight text-balance md:text-4xl">
+                  It starts with understanding you—and why the valuation matters.
+                </h3>
+                <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-ink">
+                  Every assignment has a person and a purpose behind it. We take the time to
+                  understand the decision you need to make, what matters to you and the story this
+                  vehicle carries.
+                </p>
+                <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-ink">
+                  A genuine passion for distinctive vehicles means looking beyond the numbers. The
+                  figure matters, but so do the history, the craftsmanship and the context that give
+                  it meaning.
+                </p>
+              </aside>
             </div>
           </div>
         </section>
 
-        <section id="services" className="border-y border-border bg-paper text-ink">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+        <section
+          id="services"
+          className="service-section relative isolate overflow-hidden border-y border-border bg-bg text-fg"
+        >
+          <div className="relative z-10 mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
             <div className="mb-10 grid gap-5 md:grid-cols-[0.75fr_1.25fr] md:items-end">
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-ink">
-                <span className="h-px w-8 bg-signal-rose" />
+              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted">
+                <span className="h-px w-8 bg-primary" />
                 Who these services are for
               </p>
               <h2 className="font-display text-4xl leading-tight text-balance md:text-5xl">
                 Specialist support for people making decisions about rare vehicles.
               </h2>
             </div>
-            <div className="grid gap-x-10 md:grid-cols-2">
-              {[
-                [
-                  FileSearch,
-                  "Owners & collectors",
-                  "For owners, collectors and prospective buyers who need a desktop review of a vehicle’s identity, provenance, transformation records, condition imagery and relevant market evidence.",
-                ],
-                [
-                  ClipboardCheck,
-                  "Clients needing an inspection",
-                  "For owners, buyers and their professional advisers who need an agreed on-site record of identifying details, visible condition and coachbuilding features. Diagnostic findings may require specialist testing.",
-                ],
-                [
-                  Landmark,
-                  "Importers & cross-border advisers",
-                  "For importers, exporters, customs brokers and legal advisers addressing a cross-border vehicle valuation. The brief identifies the requested basis and jurisdiction; legal application should be confirmed with counsel.",
-                ],
-                [
-                  Scale,
-                  "Insurers, legal & estate professionals",
-                  "For insurers, lawyers, executors and corporate advisers requiring evidence for insurance schedules, formal proceedings or complex asset divisions. Any expert declaration is tailored to the applicable code; decision-makers determine acceptance.",
-                ],
-              ].map(([Icon, t, d], index) => (
-                <article
-                  key={String(t)}
-                  className="grid grid-cols-[3rem_1fr] gap-4 border-t border-line py-6 md:py-8"
-                >
-                  <span
-                    className={`font-display text-lg ${index % 2 ? "text-signal-coral" : "text-primary"}`}
+            <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr] md:gap-12">
+              <figure className="service-feature-image">
+                <img
+                  src="/cars/cross-border-workshop.jpg"
+                  alt="A red sports car and green classic racing car inside a specialist workshop"
+                  loading="lazy"
+                />
+              </figure>
+              <div className="service-audience-list">
+                {[
+                  [
+                    "Owners & collectors",
+                    "For owners, collectors and prospective buyers who need a desktop review of a vehicle’s identity, provenance, transformation records, condition imagery and relevant market evidence.",
+                  ],
+                  [
+                    "Clients needing an inspection",
+                    "For owners, buyers and their professional advisers who need an agreed on-site record of identifying details, visible condition and coachbuilding features. Diagnostic findings may require specialist testing.",
+                  ],
+                  [
+                    "Importers & cross-border advisers",
+                    "For importers, exporters, customs brokers and legal advisers addressing a cross-border vehicle valuation. The brief identifies the requested basis and jurisdiction; legal application should be confirmed with counsel.",
+                  ],
+                  [
+                    "Insurers, legal & estate professionals",
+                    "For insurers, lawyers, executors and corporate advisers requiring evidence for insurance schedules, formal proceedings or complex asset divisions. Any expert declaration is tailored to the applicable code; decision-makers determine acceptance.",
+                  ],
+                ].map(([t, d], index) => (
+                  <article
+                    key={String(t)}
+                    className="service-audience-card grid grid-cols-[2rem_1fr] gap-3 border-t border-border py-5 first:border-t-0 md:grid-cols-[2.5rem_1fr] md:gap-4 md:py-6"
                   >
-                    0{index + 1}
-                  </span>
-                  <div>
-                    <Icon className="mb-4 text-muted-ink" size={21} strokeWidth={1.5} />
-                    <h3 className="font-display text-2xl">{String(t)}</h3>
-                    <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-ink">
-                      {String(d)}
-                    </p>
-                  </div>
-                </article>
-              ))}
+                    <span className="font-display text-sm text-primary">0{index + 1}</span>
+                    <div>
+                      <h3 className="font-display text-xl md:text-2xl">{String(t)}</h3>
+                      <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
+                        {String(d)}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-
-        <section id="condition-photo" className="overflow-hidden bg-paper text-ink">
-          <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-[0.72fr_1.28fr] md:px-10 md:py-24">
-            <div>
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-ink">
-                <span className="h-px w-8 bg-signal-coral" />
-                Condition changes the comparison
-              </p>
-              <h2 className="mt-5 max-w-md font-display text-4xl leading-tight text-balance md:text-5xl">
-                A photograph can start a question. It cannot answer every one.
-              </h2>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-ink">
-                Condition, storage and repair evidence may affect marketability. Images support
-                research but do not replace an inspection or prove a vehicle’s value.
-              </p>
-            </div>
-            <figure className="photo-card-stack photo-card-stack-coral">
-              <img
-                src="/cars/red-tuned-sports-car.jpg"
-                alt="Close detail of a modified red sports car and wheel"
-                loading="lazy"
-                className="h-72 w-full object-cover md:h-[30rem]"
-              />
-            </figure>
           </div>
         </section>
 
@@ -361,13 +350,9 @@ function Home() {
                   "The conclusion",
                   "A reasoned opinion tied to the agreed purpose, market and valuation basis.",
                 ],
-              ].map(([number, title, detail], index) => (
+              ].map(([number, title, detail]) => (
                 <article key={number} className="border-t border-border pt-5">
-                  <span
-                    className={`font-display text-sm ${index === 1 ? "text-primary" : index === 2 ? "text-signal-coral" : "text-signal-rose"}`}
-                  >
-                    {number}
-                  </span>
+                  <span className="font-display text-sm text-primary">{number}</span>
                   <h3 className="mt-4 font-display text-2xl">{title}</h3>
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-ink">{detail}</p>
                 </article>
@@ -402,11 +387,8 @@ function Home() {
                         "Instructions",
                         "The letter of instruction and valuation question, included or annexed to the brief.",
                       ],
-                    ].map(([title, detail], index) => (
-                      <li
-                        key={title}
-                        className={`border-l pl-4 ${index === 1 ? "border-signal-coral" : "border-primary"}`}
-                      >
+                    ].map(([title, detail]) => (
+                      <li key={title} className="border-l border-primary pl-4">
                         <h4 className="text-sm font-medium">{title}</h4>
                         <p className="mt-2 text-sm leading-relaxed text-muted-ink">{detail}</p>
                       </li>
@@ -436,7 +418,7 @@ function Home() {
                     treated as explicit analytical limitations rather than speculative assumptions.
                   </p>
                 </div>
-                <div className="border-l border-signal-coral pl-4">
+                <div className="border-l border-primary pl-4">
                   <h4 className="font-medium">Purpose &amp; legal basis</h4>
                   <p className="mt-2 text-sm leading-relaxed text-muted-ink">
                     Each brief states its intended use, valuation basis, assumptions and limits.
@@ -453,61 +435,51 @@ function Home() {
           </div>
         </section>
 
-        <section
-          id="fees"
-          className="relative isolate overflow-hidden border-y border-border bg-bg"
-        >
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-            <img
-              src="/cars/fees-sunset-drive.jpg"
-              alt=""
-              className="h-full w-full object-cover object-[center_28%] opacity-100"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-bg/60 via-bg/45 to-bg/35" />
-          </div>
-          <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
-            <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-fg">
-              <span className="h-px w-8 bg-primary" />A clear scope before work begins
-            </p>
-            <h2 className="mt-4 font-display text-5xl text-balance">Fees</h2>
-            <div className="offset-panel mt-8">
-              <div className="grid gap-6 border border-primary/40 bg-bg/85 p-6 shadow-xl md:grid-cols-[0.7fr_1.3fr] md:items-center md:p-8">
+        <section id="fees" className="border-y border-line bg-paper-2 text-ink">
+          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+            <div className="grid gap-6 md:grid-cols-[0.75fr_1.25fr] md:items-start">
+              <div>
+                <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-ink">
+                  <span className="h-px w-8 bg-primary" />A clear scope before work begins
+                </p>
+                <h2 className="mt-4 font-display text-5xl text-balance">Fees</h2>
+              </div>
+              <div className="grid gap-6 border-y border-line py-6 sm:grid-cols-[0.45fr_1.55fr] sm:items-start">
                 <div>
-                  <h3 className="text-sm uppercase tracking-[0.16em] text-muted">
+                  <h3 className="text-xs uppercase tracking-[0.16em] text-muted-ink">
                     All valuation assignments
                   </h3>
-                  <p className="mt-3 font-display text-4xl text-primary">POA</p>
+                  <p className="mt-2 font-display text-4xl text-primary">POA</p>
                 </div>
-                <div className="space-y-3 text-sm leading-relaxed text-muted">
+                <div className="space-y-3 text-sm leading-relaxed">
                   <p>
                     Desktop evidence reviews and on-site physical inspections are scoped and quoted
                     individually to reflect the vehicle, evidence requirements and assignment
                     complexity. For assets valued above USD $1 million, the valuation fee is capped
-                    at <span className="font-medium text-fg">USD $10,000</span>.
+                    at <span className="font-medium">USD $10,000</span>.
                   </p>
-                  <p>
+                  <p className="text-muted-ink">
                     Agreed travel, third-party inspection or diagnostic work, and specialized access
                     costs are separate unless included in writing. Any sale or placement service is
                     scoped and agreed separately.
                   </p>
                 </div>
               </div>
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <div className="border border-border bg-bg/80 p-5">
-                  <h3 className="font-display text-xl text-fg">Desktop evidence review</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    Document, provenance, image and market-evidence review within the agreed scope.
-                  </p>
-                </div>
-                <div className="border border-border bg-bg/80 p-5">
-                  <h3 className="font-display text-xl text-fg">On-site physical inspection</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    Agreed in-person inspection and evidence record; travel, access and specialist
-                    testing are separately identified.
-                  </p>
-                </div>
-              </div>
+            </div>
+            <div className="grid border-b border-line md:grid-cols-2 md:divide-x md:divide-line">
+              <article className="border-t border-line py-5 md:py-6 md:pr-8">
+                <h3 className="font-display text-2xl">Desktop evidence review</h3>
+                <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-ink">
+                  Document, provenance, image and market-evidence review within the agreed scope.
+                </p>
+              </article>
+              <article className="border-t border-line py-5 md:py-6 md:pl-8">
+                <h3 className="font-display text-2xl">On-site physical inspection</h3>
+                <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-ink">
+                  Agreed in-person inspection and evidence record; travel, access and specialist
+                  testing are separately identified.
+                </p>
+              </article>
             </div>
           </div>
         </section>
@@ -545,28 +517,24 @@ function Home() {
                   "Support for complex imports, customs reviews and cross-border assignments",
                 ].map((line, index) => (
                   <li key={line} className="flex gap-3">
-                    <span
-                      className={`font-display ${index % 2 ? "text-signal-coral" : "text-primary"}`}
-                    >
-                      0{index + 1}
-                    </span>
+                    <span className="font-display text-primary">0{index + 1}</span>
                     <span>{line}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <figure className="photo-card-stack photo-card-stack-cyan mx-2 md:mx-4">
+            <figure className="mx-2 md:mx-4">
               <img
-                src="/cars/brayden-walls-vehicle-assessment.jpeg"
-                alt="ADVERSIQ vehicle assessment beside a classic Mercedes-Benz in Melbourne"
-                className="relative aspect-[4/3] w-full object-cover object-center"
-                width={1408}
-                height={768}
+                src="/cars/brayden-walls-sunset-drive.jpg"
+                alt="Illustrated classic-car interior with the sun setting over a mountain road"
+                className="aspect-[4/5] w-full object-cover object-center"
+                width={768}
+                height={1152}
                 loading="lazy"
               />
-              <figcaption className="mt-3 flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-muted">
-                <span>Melbourne, Australia</span>
-                <span>ADVERSIQ / Vehicle assessment</span>
+              <figcaption className="mt-3 flex items-center justify-between border-t border-border pt-3 text-[10px] uppercase tracking-[0.18em] text-muted">
+                <span>A driver’s-eye perspective</span>
+                <span>ADVERSIQ / Rare vehicle insight</span>
               </figcaption>
             </figure>
           </div>
