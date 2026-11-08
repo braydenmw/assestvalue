@@ -90,20 +90,6 @@ function Home() {
                 connects identity, provenance, condition and relevant market evidence to a defined
                 valuation question for clients, insurers, advisers and authorities.
               </p>
-              <div className="mt-8 flex flex-col justify-end gap-3 sm:flex-row">
-                <a
-                  href="#engage"
-                  className="inline-flex h-12 items-center justify-center gap-2 bg-primary px-6 font-medium text-primary-ink transition-colors hover:bg-signal-cyan/80"
-                >
-                  Discuss your vehicle <ArrowRight size={16} />
-                </a>
-                <a
-                  href="#method"
-                  className="inline-flex h-12 items-center justify-center border border-border px-6 text-fg transition-colors hover:border-primary hover:text-primary"
-                >
-                  See the method
-                </a>
-              </div>
               <p className="mt-10 border-t border-border pt-4 text-xs uppercase tracking-[0.18em] text-muted">
                 Melbourne based <span className="mx-2 text-primary">/</span> International market
                 context
@@ -410,7 +396,7 @@ function Home() {
                       ],
                       [
                         "Qualifications",
-                        "A relevant CV, including 20+ years in vehicle sales and 7+ years of Associate Valuer experience.",
+                        "A relevant CV, including 20+ years in vehicle sales and 7+ years of vehicle valuation experience.",
                       ],
                       [
                         "Instructions",
@@ -534,14 +520,14 @@ function Home() {
                 About Brayden Walls
               </p>
               <h2 className="mt-5 max-w-xl font-display text-4xl leading-tight text-balance md:text-5xl">
-                Experience for vehicles that do not fit the standard categories.
+                Vehicle market experience, applied to specialist assignments.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-                Brayden Walls is a full-time professional Associate Valuer based in Melbourne,
-                Australia. He brings more than 20 years of motor vehicle sales experience and over
-                seven years as an Associate Valuer. Having bought and sold vehicles in wholesale and
-                retail markets, he understands how the story on paper must connect to the vehicle
-                itself and the people who may buy it.
+                Brayden Walls is a Melbourne-based vehicle market and valuation professional. He
+                brings more than 20 years of motor vehicle sales experience and over seven years of
+                experience in vehicle valuation work. Having bought and sold vehicles in wholesale
+                and retail markets, he understands how the story on paper must connect to the
+                vehicle itself and the people who may buy it.
               </p>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
                 ADVERSIQ steps in when a rare or transformed vehicle is difficult to identify,
@@ -553,7 +539,7 @@ function Home() {
               <ul className="mt-7 grid gap-x-6 gap-y-3 border-t border-border pt-5 text-sm text-muted sm:grid-cols-2">
                 {[
                   "20+ years in motor vehicle sales",
-                  "7+ years as a professional Associate Valuer",
+                  "7+ years of experience in vehicle valuation work",
                   "Wholesale and retail buying and selling experience",
                   "Melbourne-based, with international market contacts",
                   "Support for complex imports, customs reviews and cross-border assignments",

@@ -96,7 +96,7 @@ Complete this section only when formally instructed as an expert and after check
 ## 9. Qualifications and instructions
 
 - **Valuer profile / CV:** [Attach current CV]
-- **Relevant experience:** [Verify and state applicable experience; current ADVERSIQ site copy states 20+ years in vehicle sales and 7+ years as an Associate Valuer]
+- **Relevant experience:** [Verify and state applicable experience; current ADVERSIQ site copy states 20+ years in vehicle sales and 7+ years of experience in vehicle valuation work]
 - **Letter of instruction:** [Attach or annex the client's request, scope and questions]
 - **Documents and supporting material:** [List annexes, photographs, diagnostic records, source notes and repair estimates]
 - **Working file reference and retention:** [Reference and applicable retention requirements]
