@@ -1,0 +1,14 @@
+node_modules/
+.vercel/
+.tanstack/
+.grok/
+screenshots/
+artifacts/
+dist/
+.output/
+coverage/
+.env*
+!.env.example
+*.local
+.node_modules.lock
+AGENTS.md

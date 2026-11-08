@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0e0c0a;
+  --color-surface: #171410;
+  --color-raised: #221e18;
+  --color-paper: #f4f0e6;
+  --color-paper-2: #ebe6da;
+  --color-fg: #f6f1e7;
+  --color-ink: #1c1814;
+  --color-muted: #a89f90;
+  --color-muted-ink: #5e564c;
+  --color-primary: #39c6d9;
+  --color-primary-ink: #0e0c0a;
+  --color-signal-rose: #f04491;
+  --color-signal-cyan: #39c6d9;
+  --color-signal-coral: #ff6b5e;
+  --color-photo-underlay: #777a78;
+  --color-border: #322c24;
+  --color-line: #d9d1c2;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Newsreader", Georgia, serif;
+  --radius: 2px;
+}
+
+@layer components {
+  .signal-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --signal-color: var(--color-signal-rose);
+  }
+
+  .signal-panel::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: color-mix(in srgb, var(--signal-color) 20%, transparent);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    content: "";
+    pointer-events: none;
+  }
+
+  .signal-panel-cyan {
+    --signal-color: var(--color-signal-cyan);
+  }
+
+  .signal-panel-coral {
+    --signal-color: var(--color-signal-coral);
+  }
+
+  .signal-frame {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .signal-frame::before,
+  .signal-frame::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+  }
+
+  .signal-frame::before {
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--color-signal-rose);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+
+  .signal-frame::after {
+    bottom: 2rem;
+    left: -0.5rem;
+    width: 0.5rem;
+    height: 5rem;
+    background: var(--color-signal-cyan);
+    transform: skewY(-45deg);
+  }
+
+  .photo-card-stack,
+  .offset-panel {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .photo-card-stack::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--color-photo-underlay);
+    content: "";
+    pointer-events: none;
+    transform: translate(0.75rem, 0.75rem) rotate(2.5deg);
+  }
+
+  .offset-panel::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background: var(--color-photo-underlay);
+    content: "";
+    pointer-events: none;
+    transform: translate(0.75rem, 0.75rem) rotate(2.5deg);
+  }
+
+  .photo-card-stack > *,
+  .offset-panel > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .photo-card-stack::after,
+  .offset-panel::after {
+    position: absolute;
+    z-index: 2;
+    top: -0.75rem;
+    left: -0.75rem;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-signal-rose);
+    content: "";
+    pointer-events: none;
+    transform: rotate(12deg);
+  }
+
+  .photo-card-stack-cyan::after {
+    background: var(--color-signal-cyan);
+  }
+
+  .photo-card-stack-coral::after {
+    background: var(--color-signal-coral);
+  }
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
