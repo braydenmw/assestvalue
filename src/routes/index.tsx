@@ -23,7 +23,7 @@ const STEPS = [
 ];
 
 function Home() {
-  const [sent, setSent] = useState(false);
+  const [enquiry, setEnquiry] = useState("");
 
   return (
     <div className="min-h-screen bg-bg text-fg">
@@ -559,9 +559,9 @@ function Home() {
                 Tell us what makes the vehicle different.
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed text-ink">
-                Tell us what vehicle you have and what valuation you need. Include its location, any
-                coachbuilder or modifications, and the decision or deadline the valuation needs to
-                support.
+                You do not need to have every vehicle detail ready. A short note about what prompted
+                the valuation, the decision ahead and any timing is enough to start. We can clarify
+                the rest together.
               </p>
               <a
                 className="mt-8 inline-flex items-center gap-3 border-t border-line pt-4 text-sm text-ink transition-colors hover:text-primary"
@@ -597,143 +597,41 @@ function Home() {
               </a>
             </div>
             <div className="bg-paper p-5 text-ink sm:p-8 md:p-10">
-              {sent ? (
-                <p className="border-l-2 border-primary bg-paper-2 p-6 text-sm leading-relaxed">
-                  Enquiry noted in this session. This preview does not transmit messages. Email
-                  brayden@adversiq.xyz with the vehicle details and purpose to discuss an
-                  engagement.
-                </p>
-              ) : (
-                <form
-                  className="grid gap-x-5 gap-y-4 sm:grid-cols-2"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSent(true);
-                  }}
-                >
-                  <label className="block text-sm">
-                    Name
-                    <input
-                      required
-                      name="name"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Email
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Year
-                    <input
-                      inputMode="numeric"
-                      name="year"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="If known"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Make
-                    <input
-                      required
-                      name="make"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="e.g. Ferrari"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Model / build
-                    <input
-                      required
-                      name="model"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="Model or current build"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Variant / edition
-                    <input
-                      name="variant"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="If applicable"
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Coachbuilder / restorer
-                    <input
-                      name="coachbuilder"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="If modified or rebuilt"
-                    />
-                  </label>
-                  <label className="block text-sm sm:col-span-2">
-                    Vehicle location
-                    <input
-                      name="location"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                      placeholder="City and country"
-                    />
-                  </label>
-                  <label className="block text-sm sm:col-span-2">
-                    What valuation do you need?
-                    <select
-                      required
-                      name="valuationPurpose"
-                      className="mt-2 h-12 w-full border border-line bg-paper px-3 outline-none transition-colors focus:border-primary"
-                    >
-                      <option value="">Select a purpose</option>
-                      <option>Insurance / agreed value</option>
-                      <option>Purchase or sale</option>
-                      <option>Import, customs or duty review</option>
-                      <option>Vehicle held or seized</option>
-                      <option>Export or re-export</option>
-                      <option>Estate or family matter</option>
-                      <option>Finance or lending</option>
-                      <option>Legal proceedings or dispute</option>
-                      <option>Other / not sure yet</option>
-                    </select>
-                  </label>
-                  <label className="block text-sm sm:col-span-2">
-                    More information
-                    <textarea
-                      name="details"
-                      rows={6}
-                      placeholder="What makes the vehicle unusual? Include known modifications or restoration, available records, the valuation question, and any timing requirements."
-                      className="mt-2 w-full border border-line bg-paper px-3 py-2 outline-none transition-colors focus:border-primary"
-                    />
-                  </label>
-                  <label className="flex items-start gap-3 text-xs leading-relaxed text-muted sm:col-span-2">
-                    <input
-                      required
-                      type="checkbox"
-                      name="termsAcknowledgement"
-                      className="mt-0.5 size-4 shrink-0 accent-primary"
-                    />
-                    <span>
-                      I have read the{" "}
-                      <a
-                        className="font-medium text-ink underline underline-offset-2"
-                        href="/terms"
-                      >
-                        Terms of Service &amp; Privacy Notice
-                      </a>
-                      . I understand this preview form does not transmit my enquiry and that an
-                      assignment requires a separate written engagement.
-                    </span>
-                  </label>
-                  <button
-                    type="submit"
-                    className="h-12 bg-ink font-medium text-paper transition-colors hover:bg-primary hover:text-primary-ink sm:col-span-2"
-                  >
-                    Submit enquiry
-                  </button>
-                </form>
-              )}
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-ink">
+                A few details to help us understand your enquiry
+              </p>
+              <h3 className="mt-3 font-display text-2xl leading-tight sm:text-3xl">
+                What has prompted your interest in a valuation?
+              </h3>
+              <div className="mt-6 grid gap-3 border-y border-line py-5 text-sm leading-relaxed text-muted-ink sm:grid-cols-2">
+                <p>What would you like the valuation to help you decide?</p>
+                <p>What is distinctive about the vehicle or its history?</p>
+                <p>Where is the vehicle, and what records are available?</p>
+                <p>Is there a deadline or particular concern we should know about?</p>
+              </div>
+              <label className="mt-6 block text-sm font-medium" htmlFor="valuation-enquiry">
+                Your message
+              </label>
+              <textarea
+                id="valuation-enquiry"
+                rows={7}
+                value={enquiry}
+                onChange={(event) => setEnquiry(event.target.value)}
+                placeholder="Share whatever you know so far. It is fine if some details are still uncertain."
+                className="mt-2 w-full resize-y border border-line bg-paper px-4 py-3 text-base leading-relaxed outline-none transition-colors placeholder:text-muted focus:border-primary"
+              />
+              <a
+                href={`mailto:brayden@adversiq.xyz?subject=Valuation%20enquiry%20%7C%20ADVERSIQ&body=${encodeURIComponent(
+                  enquiry.trim() || "Hello, I am enquiring about a vehicle valuation.",
+                )}`}
+                className="mt-5 flex min-h-12 items-center justify-center gap-3 bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-primary hover:text-primary-ink"
+              >
+                Continue by email <ArrowRight size={16} />
+              </a>
+              <p className="mt-4 text-xs leading-relaxed text-muted-ink">
+                This opens a new email addressed to brayden@adversiq.xyz with your message. You can
+                review it and add your contact details before sending.
+              </p>
             </div>
           </div>
         </section>
