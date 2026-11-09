@@ -7,27 +7,18 @@ export const Route = createFileRoute("/")({ component: Home });
 const STEPS = [
   {
     n: "01",
-    t: "Identify the complete vehicle",
+    t: "The vehicle",
+    d: "Identity, original specification and the work that makes this car different.",
   },
   {
     n: "02",
-    t: "Understand what changed",
+    t: "The evidence",
+    d: "Documents, condition and relevant market sales—with gaps clearly noted.",
   },
   {
     n: "03",
-    t: "Define the relevant market",
-  },
-  {
-    n: "04",
-    t: "Research comparable evidence",
-  },
-  {
-    n: "05",
-    t: "Assess condition and context",
-  },
-  {
-    n: "06",
-    t: "Explain the conclusion",
+    t: "The conclusion",
+    d: "A reasoned opinion tied to the agreed purpose, market and valuation basis.",
   },
 ];
 
@@ -70,7 +61,8 @@ function Home() {
                 Purpose-led valuation
               </p>
               <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[0.98] text-fg text-balance sm:text-6xl lg:text-7xl">
-                When the car is one of one, see the whole story.
+                When the car is <span className="text-signal-rose">one of one</span>, see the{" "}
+                <span className="text-primary">whole story.</span>
               </h1>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-fg/85 md:text-lg">
                 ADVERSIQ prepares specialist valuations for complex vehicle assignments—from desktop
@@ -102,7 +94,7 @@ function Home() {
                 className="border-l border-line pl-6 md:pl-8"
                 aria-label="Examples of vehicle marques and specialists"
               >
-                <p className="mb-4 text-xs uppercase tracking-[0.18em] text-muted-ink">
+                <p className="mb-4 text-xs uppercase tracking-[0.18em] text-primary">
                   Marques &amp; specialist builds
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4">
@@ -118,7 +110,7 @@ function Home() {
                   ].map((name) => (
                     <div
                       key={name}
-                      className="flex min-h-14 items-center border-b border-line py-3 pr-3 font-display text-base sm:text-lg"
+                      className="flex min-h-14 items-center border-b border-line py-3 pr-3 font-display text-base text-primary transition-colors hover:text-muted-ink sm:text-lg"
                     >
                       {name}
                     </div>
@@ -187,17 +179,17 @@ function Home() {
           </div>
         </section>
 
-        <section id="market-context-photo" className="bg-surface">
+        <section id="market-context-photo" className="bg-lime-panel text-ink">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
             <div className="max-w-3xl">
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-primary">
-                <span className="h-px w-8 bg-primary" />
+              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-ink/70">
+                <span className="h-px w-8 bg-ink/70" />
                 When borders and assessments complicate the picture
               </p>
               <h2 className="mt-5 max-w-lg font-display text-4xl leading-tight text-balance md:text-5xl">
                 One vehicle. Different markets, rules and assumptions.
               </h2>
-              <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-ink/80">
                 Cross-border movement can bring substantial duties, tax and customs scrutiny.
                 Disputed or uncertain values may complicate a sale or contribute to a vehicle being
                 held or seized. We help establish what the vehicle is and document the relevant
@@ -206,9 +198,9 @@ function Home() {
               </p>
               <a
                 href="#method"
-                className="mt-7 inline-flex items-center gap-3 text-sm font-medium text-fg transition-colors hover:text-primary"
+                className="mt-7 inline-flex items-center gap-3 text-sm font-medium text-ink transition-colors hover:text-ink/70"
               >
-                How we approach the evidence <ArrowRight size={16} className="text-primary" />
+                How we approach the evidence <ArrowRight size={16} className="text-ink" />
               </a>
             </div>
           </div>
@@ -232,16 +224,21 @@ function Home() {
                     key={s.n}
                     className="grid grid-cols-[3rem_1fr] items-baseline gap-3 border-b border-line py-5 last:border-b-0 md:grid-cols-[4rem_1fr] md:gap-6 md:py-6"
                   >
-                    <p className="font-display text-sm text-primary">{s.n}</p>
-                    <h3 className="font-display text-xl md:text-2xl">{s.t}</h3>
+                    <p className="font-display text-sm text-signal-rose">{s.n}</p>
+                    <div>
+                      <h3 className="font-display text-xl text-signal-rose md:text-2xl">{s.t}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-ink md:text-base">
+                        {s.d}
+                      </p>
+                    </div>
                   </article>
                 ))}
               </div>
-              <aside className="flex flex-col justify-center border-l-2 border-primary pl-6 md:pl-10">
+              <aside className="flex flex-col justify-center border-l-2 border-signal-rose pl-6 md:pl-10">
                 <p className="text-xs uppercase tracking-[0.22em] text-muted-ink">
                   The value behind the valuation
                 </p>
-                <h3 className="mt-5 max-w-xl font-display text-3xl leading-tight text-balance md:text-4xl">
+                <h3 className="mt-5 max-w-xl font-display text-3xl leading-tight text-signal-rose text-balance md:text-4xl">
                   It starts with understanding you—and why the valuation matters.
                 </h3>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-ink">
@@ -261,23 +258,23 @@ function Home() {
 
         <section
           id="services"
-          className="service-section relative isolate overflow-hidden border-y border-border bg-bg text-fg"
+          className="service-section relative isolate overflow-hidden border-y border-border bg-wheel-red text-fg"
         >
           <div className="relative z-10 mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
-            <div className="mb-10 grid gap-5 md:grid-cols-[0.75fr_1.25fr] md:items-end">
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted">
-                <span className="h-px w-8 bg-primary" />
+            <div className="mb-10 max-w-3xl">
+              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-fg/80">
+                <span className="h-px w-8 bg-lime-panel" />
                 Who these services are for
               </p>
-              <h2 className="font-display text-4xl leading-tight text-balance md:text-5xl">
+              <h2 className="mt-4 font-display text-4xl leading-tight text-ink text-balance md:text-5xl">
                 Specialist support for people making decisions about rare vehicles.
               </h2>
             </div>
-            <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr] md:gap-12">
+            <div className="grid items-stretch gap-8 md:grid-cols-[0.86fr_1.14fr] md:gap-12">
               <figure className="service-feature-image">
                 <img
-                  src="/cars/cross-border-workshop.jpg"
-                  alt="A red sports car and green classic racing car inside a specialist workshop"
+                  src="/cars/red-wheel-supercar.jpg"
+                  alt="Silver supercar with a red-accented wheel parked beside a modern building"
                   loading="lazy"
                 />
               </figure>
@@ -302,12 +299,14 @@ function Home() {
                 ].map(([t, d], index) => (
                   <article
                     key={String(t)}
-                    className="service-audience-card grid grid-cols-[2rem_1fr] gap-3 border-t border-border py-5 first:border-t-0 md:grid-cols-[2.5rem_1fr] md:gap-4 md:py-6"
+                    className="service-audience-card flex flex-col gap-3 border p-5 md:p-6"
                   >
-                    <span className="font-display text-sm text-primary">0{index + 1}</span>
+                    <span className="font-display text-sm tracking-[0.18em] text-lime-panel">
+                      0{index + 1}
+                    </span>
                     <div>
                       <h3 className="font-display text-xl md:text-2xl">{String(t)}</h3>
-                      <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
+                      <p className="mt-2 max-w-lg text-sm leading-relaxed text-fg/85">
                         {String(d)}
                       </p>
                     </div>
@@ -455,8 +454,7 @@ function Home() {
                   <p>
                     Desktop evidence reviews and on-site physical inspections are scoped and quoted
                     individually to reflect the vehicle, evidence requirements and assignment
-                    complexity. For assets valued above USD $1 million, the valuation fee is capped
-                    at <span className="font-medium">USD $10,000</span>.
+                    complexity.
                   </p>
                   <p className="text-muted-ink">
                     Agreed travel, third-party inspection or diagnostic work, and specialized access

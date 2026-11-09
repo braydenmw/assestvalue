@@ -3,6 +3,9 @@
 @theme {
   --color-bg: #0e0c0a;
   --color-surface: #171410;
+  --color-surface-cool: #17191d;
+  --color-lime-panel: #c7e83b;
+  --color-wheel-red: #c71837;
   --color-raised: #221e18;
   --color-paper: #f4f0e6;
   --color-paper-2: #ebe6da;
@@ -75,22 +78,21 @@
   }
 
   .service-audience-card {
-    background: var(--color-bg);
+    background: color-mix(in srgb, var(--color-bg) 24%, transparent);
+    border-color: rgb(255 255 255 / 24%);
+  }
+
+  .service-audience-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
   }
 
   .service-feature-image {
     position: relative;
-    min-height: 20rem;
+    min-height: 100%;
     overflow: hidden;
-    background: var(--color-surface);
-  }
-
-  .service-feature-image::after {
-    position: absolute;
-    inset: 45% 0 0;
-    background: linear-gradient(180deg, transparent, var(--color-bg));
-    content: "";
-    pointer-events: none;
+    background: var(--color-wheel-red);
   }
 
   .service-feature-image img {
@@ -163,6 +165,10 @@
   }
 
   @media (max-width: 640px) {
+    .service-audience-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .service-feature-image {
       min-height: 0;
       aspect-ratio: 4 / 3;
