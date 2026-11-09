@@ -184,17 +184,17 @@ function Home() {
           </div>
         </section>
 
-        <section id="market-context-photo" className="bg-lime-panel text-ink">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+        <section id="market-context-photo" className="bg-market-green text-ink">
+          <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:gap-10 md:px-10 md:py-24">
             <div className="max-w-3xl">
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-ink/70">
-                <span className="h-px w-8 bg-ink/70" />
+              <p className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-ink/75">
+                <span className="h-px w-8 bg-ink/75" />
                 When borders and assessments complicate the picture
               </p>
-              <h2 className="mt-5 max-w-lg font-display text-4xl leading-tight text-balance md:text-5xl">
+              <h2 className="mt-5 max-w-2xl font-display text-4xl leading-[1.05] text-balance md:text-6xl">
                 One vehicle. Different markets, rules and assumptions.
               </h2>
-              <p className="mt-5 max-w-lg text-base leading-relaxed text-ink/80">
+              <p className="mt-6 max-w-xl text-base leading-7 text-ink/90 md:text-lg md:leading-8">
                 Cross-border movement can bring substantial duties, tax and customs scrutiny.
                 Disputed or uncertain values may complicate a sale or contribute to a vehicle being
                 held or seized. We help establish what the vehicle is and document the relevant
@@ -203,11 +203,25 @@ function Home() {
               </p>
               <a
                 href="#method"
-                className="mt-7 inline-flex items-center gap-3 text-sm font-medium text-ink transition-colors hover:text-ink/70"
+                className="mt-8 inline-flex min-h-12 items-center gap-3 bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-primary hover:text-primary-ink"
               >
-                How we approach the evidence <ArrowRight size={16} className="text-ink" />
+                How we approach the evidence <ArrowRight size={16} />
               </a>
             </div>
+            <figure className="mx-auto w-full max-w-[40rem] md:justify-self-end">
+              <img
+                src="/cars/green-dashboard-steering.png"
+                alt="Illustration of a classic car dashboard and steering wheel"
+                className="h-auto w-full object-contain"
+                width={911}
+                height={768}
+                loading="lazy"
+              />
+              <figcaption className="mt-2 flex items-center justify-between border-t border-ink/20 pt-3 text-[10px] font-medium uppercase tracking-[0.18em] text-ink/70">
+                <span>Cross-border valuation</span>
+                <span>Market context / 01</span>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
