@@ -58,17 +58,17 @@ function Home() {
             <div className="flex flex-col justify-center py-12 md:pl-12 md:pr-4 md:py-20">
               <p className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-primary">
                 <span className="h-px w-8 bg-primary" />
-                Purpose-led valuation
+                Specialist automotive valuations
               </p>
               <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[0.98] text-fg text-balance sm:text-6xl lg:text-7xl">
                 When the car is <span className="text-signal-rose">one of one</span>, see the{" "}
                 <span className="text-primary">whole story.</span>
               </h1>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-fg/85 md:text-lg">
-                ADVERSIQ prepares specialist valuations for complex vehicle assignments—from desktop
-                evidence reviews to agreed on-site inspections and cross-border matters. Each brief
-                connects identity, provenance, condition and relevant market evidence to a defined
-                valuation question.
+                ADVERSIQ prepares purpose-led valuations for rare, coachbuilt, restored and
+                substantially modified vehicles. From desktop evidence reviews to agreed on-site
+                inspections and cross-border matters, each assignment connects identity, provenance,
+                condition and relevant market evidence to a defined valuation question.
               </p>
               <p className="mt-10 border-t border-border pt-5 text-[10px] uppercase tracking-[0.16em] text-muted sm:text-xs">
                 Melbourne, Australia <span className="mx-2 text-primary">/</span> International
@@ -89,6 +89,11 @@ function Home() {
                 <h2 className="mt-4 max-w-md font-display text-4xl leading-tight text-balance md:text-5xl">
                   The badge may be familiar. The vehicle may not be.
                 </h2>
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-ink md:text-base">
+                  Standard price guides are built around typical vehicles. Rare, coachbuilt and
+                  transformed cars can sit outside those categories, so their identity, current
+                  specification and supporting evidence need closer consideration.
+                </p>
               </div>
               <div
                 className="border-l border-line pl-6 md:pl-8"
@@ -125,17 +130,17 @@ function Home() {
                     {
                       title: "A base model is not the whole build",
                       description:
-                        "A stock supercar may have a documented coachbuilder conversion. An older chassis may have been comprehensively rebuilt into a modern performance car. The original listing may not describe what exists now.",
+                        "Factory guides can miss coachbuilt conversions, limited series and substantial restomods. We assess the vehicle as it exists today, using available records to understand how it differs from its original specification.",
                     },
                     {
                       title: "Import calculations are not market evidence",
                       description:
-                        "Customs values, duties and taxes depend on local rules and declared facts. A calculation can differ from what a specialist buyer would pay—and neither should be mistaken for the other.",
+                        "Customs values, duties and taxes depend on local rules and declared facts. Statutory calculations may differ from market evidence; we document relevant market context for the agreed valuation purpose.",
                     },
                     {
                       title: "Rare does not mean easy to price",
                       description:
-                        "Few close sales, unclear provenance or limited buyer demand can make both high and low estimates hard to defend. Build cost alone does not establish market value.",
+                        "Limited comparable sales, incomplete provenance or unverified modifications can constrain an opinion. We state relevant assumptions and evidence gaps rather than treating build cost or speculation as proof of market value.",
                     },
                   ].map(({ title, description }, index) => (
                     <article key={title} className="py-6 first:pt-0 last:pb-0">
@@ -264,10 +269,10 @@ function Home() {
             <div className="mb-10 max-w-3xl">
               <p className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-fg/80">
                 <span className="h-px w-8 bg-lime-panel" />
-                Who these services are for
+                Four ways we support complex vehicle valuations
               </p>
               <h2 className="mt-4 font-display text-4xl leading-tight text-ink text-balance md:text-5xl">
-                Specialist support for people making decisions about rare vehicles.
+                Specialist valuation services for distinctive vehicles.
               </h2>
             </div>
             <div className="grid items-stretch gap-8 md:grid-cols-[0.86fr_1.14fr] md:gap-12">
@@ -281,20 +286,20 @@ function Home() {
               <div className="service-audience-list">
                 {[
                   [
-                    "Owners & collectors",
-                    "For owners, collectors and prospective buyers who need a desktop review of a vehicle’s identity, provenance, transformation records, condition imagery and relevant market evidence.",
+                    "Desktop evidence reviews",
+                    "A scoped review of supplied vehicle details, provenance, build records, condition images and relevant market evidence. For remote buyers, brokers and pre-purchase due diligence.",
                   ],
                   [
-                    "Clients needing an inspection",
-                    "For owners, buyers and their professional advisers who need an agreed on-site record of identifying details, visible condition and coachbuilding features. Diagnostic findings may require specialist testing.",
+                    "On-site physical inspections",
+                    "An agreed in-person record of identifying details, visible condition and notable coachbuilding or modification features. For collectors, insurers and high-value asset managers; diagnostics require separate specialist testing where relevant.",
                   ],
                   [
-                    "Importers & cross-border advisers",
-                    "For importers, exporters, customs brokers and legal advisers addressing a cross-border vehicle valuation. The brief identifies the requested basis and jurisdiction; legal application should be confirmed with counsel.",
+                    "Cross-border valuation support",
+                    "Purpose-defined market evidence for assignments involving imports, exports or differing jurisdictions. For importers, exporters, customs brokers and tax counsel; legal and customs application should be confirmed with qualified advisers.",
                   ],
                   [
-                    "Insurers, legal & estate professionals",
-                    "For insurers, lawyers, executors and corporate advisers requiring evidence for insurance schedules, formal proceedings or complex asset divisions. Any expert declaration is tailored to the applicable code; decision-makers determine acceptance.",
+                    "Reports for legal, insurance & estate matters",
+                    "Independent reports scoped to the agreed instructions and intended use. For insurers, law firms, executors and dispute-resolution advisers; expert requirements and acceptance depend on the relevant jurisdiction and decision-maker.",
                   ],
                 ].map(([t, d], index) => (
                   <article
@@ -328,8 +333,9 @@ function Home() {
                 Clear reasoning. No guesswork.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-ink">
-                A useful report answers three questions: what is this vehicle today, what does the
-                available evidence show, and how does that evidence support the valuation?
+                A useful report explains what the vehicle is today, what the available evidence
+                shows, and how that evidence supports an opinion for the agreed purpose and
+                valuation basis.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -337,12 +343,12 @@ function Home() {
                 [
                   "01",
                   "The vehicle",
-                  "Identity, original specification and the work that makes this car different.",
+                  "Identity, original specification and the bespoke work that makes this car different.",
                 ],
                 [
                   "02",
                   "The evidence",
-                  "Documents, condition and relevant market sales—with gaps clearly noted.",
+                  "Documents, physical condition and relevant market sales—with gaps clearly noted.",
                 ],
                 [
                   "03",
@@ -380,7 +386,7 @@ function Home() {
                       ],
                       [
                         "Qualifications",
-                        "A relevant CV, including 20+ years in vehicle sales and 7+ years of vehicle valuation experience.",
+                        "A relevant CV outlining vehicle sales and valuation experience.",
                       ],
                       [
                         "Instructions",
@@ -404,9 +410,9 @@ function Home() {
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-ink">
                   High-resolution images support initial desktop research, but cannot verify
-                  diagnostic scan data, physical wear or coachbuilding integrity. A physical
-                  inspection record—and specialist diagnostic testing where relevant—is needed to
-                  verify those findings.
+                  diagnostic scan data, physical wear or coachbuilding integrity. Where those
+                  matters are material, an agreed physical inspection and specialist testing may be
+                  required to verify them.
                 </p>
               </div>
               <div className="mt-8 grid gap-8 sm:grid-cols-2">
@@ -421,7 +427,8 @@ function Home() {
                   <h4 className="font-medium">Purpose &amp; legal basis</h4>
                   <p className="mt-2 text-sm leading-relaxed text-muted-ink">
                     Each brief states its intended use, valuation basis, assumptions and limits.
-                    Legal and customs requirements vary by jurisdiction.
+                    Reports are prepared to the agreed instructions and scope; legal and customs
+                    requirements vary by jurisdiction.
                   </p>
                 </div>
               </div>
@@ -446,7 +453,7 @@ function Home() {
               <div className="grid gap-6 border-y border-line py-6 sm:grid-cols-[0.45fr_1.55fr] sm:items-start">
                 <div>
                   <h3 className="text-xs uppercase tracking-[0.16em] text-muted-ink">
-                    All valuation assignments
+                    Fees: POA (Price on Application)
                   </h3>
                   <p className="mt-2 font-display text-4xl text-primary">POA</p>
                 </div>
@@ -490,20 +497,23 @@ function Home() {
                 About Brayden Walls
               </p>
               <h2 className="mt-5 max-w-xl font-display text-4xl leading-tight text-balance md:text-5xl">
-                Vehicle market experience, applied to specialist assignments.
+                Brayden Walls
               </h2>
+              <p className="mt-3 font-display text-xl text-primary">
+                Vehicle market experience, applied to specialist assignments.
+              </p>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-                Brayden Walls is a Melbourne-based vehicle market and valuation professional. He
-                brings more than 20 years of motor vehicle sales experience and over seven years of
+                Brayden Walls is a Melbourne-based vehicle market and valuation professional with
+                more than 20 years of motor vehicle sales experience and over seven years of
                 experience in vehicle valuation work. Having bought and sold vehicles in wholesale
                 and retail markets, he understands how the story on paper must connect to the
                 vehicle itself and the people who may buy it.
               </p>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
-                ADVERSIQ steps in when a rare or transformed vehicle is difficult to identify,
-                compare or explain—whether it began as a stock supercar, was coachbuilt, or was
-                rebuilt from an older platform. Brayden’s international network can help locate
-                relevant market context; the opinion still depends on evidence, scope and the
+                ADVERSIQ supports assignments where a rare or transformed vehicle is difficult to
+                identify, compare or explain—whether it began as a stock supercar, was coachbuilt or
+                was rebuilt from an older platform. International contacts can help locate relevant
+                market context; each opinion remains tied to the evidence, agreed scope and
                 available records.
               </p>
               <ul className="mt-7 grid gap-x-6 gap-y-3 border-t border-border pt-5 text-sm text-muted sm:grid-cols-2">
@@ -598,16 +608,29 @@ function Home() {
             </div>
             <div className="bg-paper p-5 text-ink sm:p-8 md:p-10">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-ink">
-                A few details to help us understand your enquiry
+                Start with what you know
               </p>
               <h3 className="mt-3 font-display text-2xl leading-tight sm:text-3xl">
-                What has prompted your interest in a valuation?
+                A short note is enough to start.
               </h3>
-              <div className="mt-6 grid gap-3 border-y border-line py-5 text-sm leading-relaxed text-muted-ink sm:grid-cols-2">
-                <p>What would you like the valuation to help you decide?</p>
-                <p>What is distinctive about the vehicle or its history?</p>
-                <p>Where is the vehicle, and what records are available?</p>
-                <p>Is there a deadline or particular concern we should know about?</p>
+              <div className="mt-6 border-y border-line py-5">
+                <p className="text-sm font-medium">
+                  A few details to help us understand your enquiry:
+                </p>
+                <ol className="mt-4 grid gap-3 text-sm leading-relaxed text-muted-ink sm:grid-cols-2">
+                  {[
+                    "What has prompted your interest in a valuation?",
+                    "What would you like the valuation to help you decide?",
+                    "What is distinctive about the vehicle or its history?",
+                    "Where is the vehicle, and what records are available?",
+                    "Is there a deadline or particular concern we should know about?",
+                  ].map((question, index) => (
+                    <li key={question} className="flex gap-3">
+                      <span className="font-display text-primary">0{index + 1}</span>
+                      <span>{question}</span>
+                    </li>
+                  ))}
+                </ol>
               </div>
               <label className="mt-6 block text-sm font-medium" htmlFor="valuation-enquiry">
                 Your message
