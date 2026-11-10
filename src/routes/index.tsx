@@ -593,11 +593,10 @@ function Home() {
               </a>
               <div className="contact-details mt-7 grid gap-4 text-sm sm:grid-cols-2 md:grid-cols-1">
                 <p>
-                  <span>Melbourne office</span>2 Verona St, Box Hill South, Victoria, Australia
+                  <span>Service location</span>Box Hill South, Victoria, Australia
                 </p>
                 <p>
-                  <span>Report production</span>
-                  Online reports are produced in Mindanao, Philippines.
+                  <span>Report writing</span>Reports are written in the Philippines.
                 </p>
                 <p>
                   <span>Phone</span>
@@ -698,8 +697,9 @@ function Home() {
               +63 960 835 4283
             </a>
             <span className="text-xs text-muted">
-              2 Verona St, Box Hill South, Victoria, Australia
+              Service location: Box Hill South, Victoria, Australia
             </span>
+            <span className="text-xs text-muted">Reports written in the Philippines</span>
           </div>
         </div>
       </footer>

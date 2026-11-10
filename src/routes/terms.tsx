@@ -7,7 +7,7 @@ const TERMS = [
   {
     title: "1. Provider and engagement",
     paragraphs: [
-      "Services are offered by Brayden Walls, trading as ADVERSIQ, ABN 55 978 113 300. The Melbourne office is at 2 Verona St, Box Hill South, Victoria, Australia. Online reports are produced in Mindanao, Philippines.",
+      "Services are offered by Brayden Walls, trading as ADVERSIQ, ABN 55 978 113 300. The service location is Box Hill South, Victoria, Australia. Reports are written in the Philippines.",
       "A website enquiry is not an appointment. An assignment begins only when the scope, intended use, valuation basis, fee, timing and other material conditions are confirmed in a written engagement accepted by both parties. The engagement letter will identify which terms apply.",
     ],
   },
@@ -74,8 +74,8 @@ const TERMS = [
     title: "10. Contact",
     paragraphs: [
       "Brayden Walls | ADVERSIQ | ABN 55 978 113 300",
-      "2 Verona St, Box Hill South, Victoria, Australia",
-      "Online reports produced in Mindanao, Philippines",
+      "Service location: Box Hill South, Victoria, Australia",
+      "Reports written in the Philippines",
       "Email: brayden@adversiq.xyz | Phone: +63 960 835 4283",
     ],
   },
