@@ -6,7 +6,7 @@
   --color-surface-cool: #17191d;
   --color-lime-panel: #c7e83b;
   --color-market-green: #98d01c;
-  --color-brass: #c7a36c;
+  --color-brass: #ffd84d;
   --color-wheel-red: #c71837;
   --color-raised: #221e18;
   --color-paper: #f4f0e6;
@@ -15,11 +15,11 @@
   --color-ink: #1c1814;
   --color-muted: #a89f90;
   --color-muted-ink: #5e564c;
-  --color-primary: #c7a36c;
+  --color-primary: #ffd84d;
   --color-primary-ink: #0e0c0a;
-  --color-signal-rose: #c7a36c;
-  --color-signal-cyan: #c7a36c;
-  --color-signal-coral: #c7a36c;
+  --color-signal-rose: #ffd84d;
+  --color-signal-cyan: #ffd84d;
+  --color-signal-coral: #ffd84d;
   --color-border: #322c24;
   --color-line: #d9d1c2;
   --font-sans: "Outfit", system-ui, sans-serif;
@@ -44,11 +44,11 @@
     margin-left: clamp(2rem, 7vw, 7rem);
     padding: 2rem;
     border: 1px solid rgb(255 255 255 / 28%);
-    background: rgb(70 70 70 / 64%);
+    background: rgb(70 70 70 / 38%);
     box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 20%);
     text-shadow: 0 1px 18px rgb(0 0 0 / 36%);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     transform: translateY(3.75rem);
   }
 
@@ -68,7 +68,7 @@
 
     .hero-copy {
       margin-left: 0;
-      background: rgb(70 70 70 / 70%);
+      background: rgb(70 70 70 / 46%);
       padding: 1.25rem;
       transform: translateY(3rem);
     }
@@ -85,10 +85,6 @@
 
   .eyebrow-dark {
     color: var(--color-brass);
-  }
-
-  .eyebrow-light {
-    color: #947044;
   }
 
   .practice-card {
@@ -122,6 +118,32 @@
     box-shadow:
       inset 0 0 0 1px rgb(240 210 166 / 28%),
       0 0.75rem 1.75rem rgb(28 24 20 / 22%);
+  }
+
+  .practice-card-visual {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    gap: 0.35rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    background: var(--color-paper-2);
+    color: var(--color-ink);
+    text-align: left;
+  }
+
+  .practice-card-visual span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+  }
+
+  .practice-card-visual strong {
+    max-width: 13rem;
+    margin-top: 1.25rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1;
   }
 
   .practice-card-copy {
@@ -380,10 +402,6 @@
     color: var(--color-brass);
   }
 
-  .enquiry-card-title {
-    color: #947044;
-  }
-
   .enquiry-select,
   .enquiry-textarea {
     border: 1px solid #c9c0b1;
@@ -536,11 +554,7 @@
 
   @media (min-width: 1100px) {
     .practice-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .practice-card-2 {
-      margin-top: 2.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .enquiry-card {
@@ -791,5 +805,19 @@
     html {
       scroll-behavior: auto;
     }
+  }
+}
+
+@layer utilities {
+  .eyebrow-light,
+  .practice-card-copy .text-brass,
+  .enquiry-card .text-brass,
+  .enquiry-card-title {
+    color: #725900;
+  }
+
+  main p.text-sm {
+    font-size: 1rem;
+    line-height: 1.65;
   }
 }

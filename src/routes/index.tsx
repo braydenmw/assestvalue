@@ -22,9 +22,14 @@ const ISSUES = [
   {
     title: "A comparison needs to be genuinely relevant",
     description:
-      "Asking prices, reported sales and statutory calculations describe different things. We assess the available evidence against the vehicle, market and purpose—and state where gaps limit the conclusion.",
+      "Asking prices, reported sales, build costs and statutory calculations describe different things. We assess each source against the vehicle, market, date and purpose, and state where gaps limit the conclusion.",
     image: "/cars/field-note-rarity-new.png",
     alt: "White classic sports car in profile against a colorful striped backdrop",
+  },
+  {
+    title: "Clear context supports better-informed decisions",
+    description:
+      "Different parties may have access to different records and market knowledge. Our reports explain the evidence considered, its limitations and the reasoning behind the opinion—without promising a particular outcome.",
   },
 ];
 
@@ -210,13 +215,12 @@ function Home() {
                 Specialist automotive valuations / Global market context
               </p>
               <h1 className="mt-5 max-w-[42rem] font-display text-5xl leading-[0.94] tracking-[-0.035em] text-paper text-balance sm:text-6xl md:text-7xl lg:text-[4.25rem]">
-                One distinctive vehicle. <em className="font-medium text-brass">More than one</em>{" "}
-                market perspective.
+                A rare vehicle deserves <em className="font-medium text-brass">a wider view.</em>
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-6 text-paper/95 sm:text-base sm:leading-7">
                 Rare and transformed vehicles can differ in value across markets. We assess the
-                vehicle and relevant Australian and international evidence for your valuation
-                purpose.
+                vehicle and relevant market evidence worldwide, in line with the purpose and scope
+                of your valuation.
               </p>
               <p className="mt-3 max-w-xl text-xs leading-relaxed text-paper/80 sm:text-sm">
                 Market context informs the opinion; it does not guarantee a higher value.
@@ -242,43 +246,56 @@ function Home() {
               <div>
                 <p className="eyebrow-light">Global market context</p>
                 <h2 className="mt-4 max-w-md font-display text-4xl leading-[1.05] text-balance md:text-5xl">
-                  The same vehicle can meet different markets.
+                  Borderless assets. Uneven information. Evidence-led research.
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-relaxed text-muted-ink md:justify-self-end md:text-base">
-                Buyer demand, vehicle availability and comparable sales can vary from one market to
-                another. A model that is rare in one place may be more familiar in another, and a
-                vehicle’s specification or history may matter differently to different buyers. The
-                relevant market depends on the assignment—not an assumption that one location is
-                always better.
+                Rare, limited-run, coachbuilt and high-performance vehicles move through an
+                international market. Buyers, sellers, insurers, estate representatives and public
+                authorities may see different parts of the picture: a model unfamiliar in one market
+                may be well known in another, while vehicle specification and history can affect
+                comparisons. We define the relevant market for each assignment rather than assuming
+                one location is always better.
               </p>
             </div>
-            <div className="make-list mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 border-b border-line pb-6">
-              <span className="eyebrow-light">Marques &amp; specialist builds</span>
-              {[
-                "Ferrari",
-                "Porsche",
-                "Mercedes-Benz",
-                "Aston Martin",
-                "Lamborghini",
-                "Singer",
-                "Mansory",
-                "Brabus",
-              ].map((marque) => (
-                <span key={marque} className="font-display text-sm text-ink/75">
-                  {marque}
-                </span>
-              ))}
+            <div className="make-list mt-7 grid gap-5 border-b border-line pb-6 md:grid-cols-2 md:gap-8">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+                <span className="eyebrow-light">Supercars &amp; hypercars</span>
+                {["Ferrari", "Porsche", "Mercedes-Benz", "Aston Martin", "Lamborghini"].map(
+                  (marque) => (
+                    <span key={marque} className="font-display text-sm text-ink/75">
+                      {marque}
+                    </span>
+                  ),
+                )}
+              </div>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+                <span className="eyebrow-light">Coachbuilders &amp; transformed vehicles</span>
+                {["Singer", "Mansory", "Brabus", "Bespoke builds"].map((marque) => (
+                  <span key={marque} className="font-display text-sm text-ink/75">
+                    {marque}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="practice-grid mt-8 grid gap-x-5 gap-y-10 md:mt-10 md:gap-x-8 md:gap-y-14">
               {ISSUES.map((issue, index) => (
                 <article key={issue.title} className={`practice-card practice-card-${index + 1}`}>
-                  <img
-                    className="practice-card-image"
-                    src={issue.image}
-                    alt={issue.alt}
-                    loading="lazy"
-                  />
+                  {issue.image ? (
+                    <img
+                      className="practice-card-image"
+                      src={issue.image}
+                      alt={issue.alt}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="practice-card-image practice-card-visual" aria-hidden="true">
+                      <span>MARKET</span>
+                      <span>+ VEHICLE</span>
+                      <span>+ PURPOSE</span>
+                      <strong>Evidence in context</strong>
+                    </div>
+                  )}
                   <div className="practice-card-copy">
                     <span className="text-[10px] font-medium tracking-[0.16em] text-muted-ink">
                       0{index + 1} <span className="mx-2 text-brass">/</span> FIELD NOTE
@@ -308,8 +325,10 @@ function Home() {
               <div className="space-y-4 text-sm leading-relaxed text-fg/80 md:text-base">
                 <p>
                   Each assignment begins by defining what the valuation needs to address. Agreeing
-                  the purpose, valuation basis, relevant market or markets and date helps keep the
-                  research and comparisons relevant to the decision ahead.
+                  the intended use, valuation basis, relevant market or markets, effective date,
+                  jurisdiction and scope helps keep the research and comparisons relevant to the
+                  decision ahead. Terminology and report requirements can differ between countries
+                  and institutions, so these are clarified at the outset.
                 </p>
                 <p>
                   We then consider the vehicle as it exists today—its identity, specification,
@@ -328,10 +347,12 @@ function Home() {
               <div>
                 <p className="text-sm leading-relaxed text-fg/80 md:text-base">
                   Import duties, taxes and customs rules may affect a cross-border decision, but
-                  they do not automatically establish a vehicle’s market value. Where an assignment
-                  involves different markets or jurisdictions, we clarify the valuation question and
-                  document relevant market evidence within the agreed scope. Appropriate legal and
-                  customs advice should be obtained separately.
+                  customs calculations are not automatically the same as an open-market valuation.
+                  The applicable rules, valuation methods and required evidence depend on the
+                  destination and the specific customs procedure. We clarify the question being
+                  addressed and document relevant market evidence within the agreed scope;
+                  jurisdiction-specific legal, tax and customs advice should be obtained from
+                  qualified local advisers.
                 </p>
                 <a className="text-link-dark mt-5" href="#evidence">
                   How we assess the evidence <ArrowRight size={14} />
@@ -367,8 +388,8 @@ function Home() {
                   <h4 className="font-display text-xl">Relevant comparisons</h4>
                   <p className="mt-3 text-sm leading-relaxed text-fg/75">
                     Available market evidence is considered for its relevance to the vehicle,
-                    market, date and assignment. Asking prices, reported sales and statutory
-                    calculations are not treated as interchangeable.
+                    market, date and assignment. Asking prices, reported sales, build costs and
+                    statutory calculations are not treated as interchangeable.
                   </p>
                 </article>
                 <article>
@@ -383,7 +404,8 @@ function Home() {
             <p className="mt-8 max-w-4xl border-t border-border pt-5 text-xs leading-relaxed text-fg/65">
               Reports are prepared to an agreed scope. They may support review, but cannot guarantee
               admissibility or acceptance by a court, insurer, customs authority or other
-              decision-maker. Requirements vary by jurisdiction.
+              decision-maker. Applicable standards and requirements vary by jurisdiction and
+              intended use.
             </p>
           </div>
         </section>
