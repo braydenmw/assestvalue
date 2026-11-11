@@ -179,21 +179,18 @@ function Home() {
             <a className="transition-colors hover:text-brass" href="#principal">
               About
             </a>
-            <a className="transition-colors hover:text-brass" href="#enquire">
-              Contact
-            </a>
             <a
-              className="grid min-h-10 place-items-center border border-brass px-4 text-brass transition-colors hover:bg-brass hover:text-ink"
+              className="grid min-h-11 place-items-center border border-brass bg-brass px-4 text-ink transition-colors hover:bg-paper hover:text-ink"
               href="#enquire"
             >
               Enquire
             </a>
           </nav>
           <a
-            className="grid min-h-10 shrink-0 place-items-center border border-brass px-4 text-[10px] font-semibold uppercase tracking-wide text-brass transition-colors hover:bg-brass hover:text-ink md:hidden"
+            className="grid min-h-11 shrink-0 place-items-center border border-brass bg-brass px-4 text-[10px] font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-paper hover:text-ink md:hidden"
             href="#enquire"
           >
-            Contact
+            Enquire
           </a>
         </div>
         <nav
@@ -212,18 +209,16 @@ function Home() {
           <a className="shrink-0" href="#principal">
             About
           </a>
-          <a className="shrink-0" href="#enquire">
-            Contact
-          </a>
         </nav>
       </header>
 
       <main id="top">
         <section className="hero-editorial relative z-10 isolate flex min-h-[34rem] items-end overflow-hidden border-b border-border sm:min-h-[36rem] lg:min-h-[min(46rem,calc(100svh-5rem))]">
-          <PhotoTiles
+          <img
+            className="hero-image"
             src="/cars/adversiq-blue-paint-burst-hypercar.jpg"
             alt="A dark blue performance car framed by a burst of color"
-            priority
+            fetchPriority="high"
           />
           <div aria-hidden="true" className="hero-editorial-shade absolute inset-0" />
           <div className="hero-editorial-content">
@@ -235,22 +230,27 @@ function Home() {
                 A rare vehicle deserves <em className="font-medium text-brass">a wider view.</em>
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-6 text-paper/95 sm:text-base sm:leading-7">
-                Led by Melbourne valuer Brayden Walls, ADVERSIQ provides independent desktop
-                reviews, on-site inspections and reports for rare, coachbuilt, restored and modified
-                vehicles—supporting purchase, insurance and estate decisions.
+                Led by Melbourne valuer Brayden Walls, ADVERSIQ provides desktop reviews, on-site
+                inspections and reports for rare, coachbuilt, restored and modified vehicles.
               </p>
-              <p className="mt-3 max-w-xl text-xs leading-relaxed text-paper/80 sm:text-sm">
-                Market context informs the opinion; it does not guarantee a higher value.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] font-medium uppercase tracking-[0.1em] sm:text-xs">
+              <div className="hero-action-group mt-6">
                 <a
                   href="#enquire"
                   className="hero-cta inline-flex min-h-12 items-center gap-3 bg-brass px-5 font-semibold text-ink transition-colors"
                 >
                   Begin a conversation <ArrowUpRight size={14} className="text-ink" />
                 </a>
-                <p className="text-paper/90">
-                  20+ years sales <span className="mx-2 text-brass">/</span> 7+ years valuations
+                <div className="hero-trust" aria-label="Experience and location">
+                  <span>
+                    <strong>20+</strong> years sales
+                  </span>
+                  <span>
+                    <strong>7+</strong> years valuations
+                  </span>
+                  <span>Melbourne · international market</span>
+                </div>
+                <p className="hero-disclaimer">
+                  Market context informs the opinion; it does not guarantee a higher value.
                 </p>
               </div>
             </div>
@@ -258,18 +258,15 @@ function Home() {
         </section>
 
         <section id="practice" className="scroll-mt-24 bg-paper text-ink">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16">
             <p className="eyebrow-light">Global market context</p>
             <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] text-balance md:text-5xl">
               Borderless assets. Uneven information. Evidence-led research.
             </h2>
             <p className="mt-5 max-w-4xl text-base leading-relaxed text-muted-ink md:text-lg">
-              Rare, limited-run, coachbuilt and high-performance vehicles move through an
-              international market. Buyers, sellers, insurers, estate representatives and public
-              authorities may see different parts of the picture: a model unfamiliar in one market
-              may be well known in another, while vehicle specification and history can affect
-              comparisons. We define the relevant market for each assignment rather than assuming
-              one location is always better.
+              Rare and transformed vehicles move through international markets. We identify the
+              market relevant to each assignment, then weigh specification and history before
+              drawing comparisons.
             </p>
             <div className="make-list mt-7 grid gap-4 md:grid-cols-2">
               <div className="marque-group">
@@ -309,18 +306,17 @@ function Home() {
           </div>
         </section>
 
-        <div className="rainbow-divider" aria-hidden="true" />
+        <div className="section-divider" aria-hidden="true" />
 
         <section id="fieldnotes" className="fieldnotes-section scroll-mt-24 bg-paper text-ink">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16">
             <p className="eyebrow-light">Field notes — 01 / 02 / 03 / 04</p>
             <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] text-balance md:text-5xl">
               The market is international. The evidence has to be too.
             </h2>
             <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-ink md:text-base">
-              Rare, limited-run, coachbuilt and high-performance vehicles move through an
-              international market. Our reports explain the evidence considered, its limitations and
-              the reasoning behind the opinion.
+              We connect the vehicle, its relevant market and the decision the report needs to
+              serve.
             </p>
             <div className="fieldnote-layout mt-8 grid gap-6 md:mt-10">
               <article className="practice-card practice-card-1">
@@ -382,7 +378,7 @@ function Home() {
         </section>
 
         <section id="method" className="method-section scroll-mt-24">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16">
             <div className="method-intro grid gap-8 md:grid-cols-2 md:items-end md:gap-16">
               <div>
                 <p className="eyebrow-dark">From question to conclusion</p>
@@ -392,16 +388,12 @@ function Home() {
               </div>
               <div className="space-y-4 text-sm leading-relaxed text-fg/80 md:text-base">
                 <p>
-                  Each assignment begins by defining what the valuation needs to address. Agreeing
-                  the intended use, valuation basis, relevant market or markets, effective date,
-                  jurisdiction and scope helps keep the research and comparisons relevant to the
-                  decision ahead. Terminology and report requirements can differ between countries
-                  and institutions, so these are clarified at the outset.
+                  We first agree the intended use, valuation basis, relevant market, effective date,
+                  jurisdiction and scope. This keeps the research tied to the decision ahead.
                 </p>
                 <p>
-                  We then consider the vehicle as it exists today—its identity, specification,
-                  provenance, condition and any significant restoration or modification—alongside
-                  the evidence available to support an opinion.
+                  Then we assess the vehicle as it exists today—its identity, specification,
+                  provenance, condition and significant changes—against the available evidence.
                 </p>
               </div>
             </div>
@@ -427,7 +419,7 @@ function Home() {
                 </a>
               </div>
             </div>
-            <div className="method-grid mt-12 grid md:grid-cols-3">
+            <div className="method-grid mt-8 grid md:grid-cols-3">
               {STEPS.map((step) => (
                 <article key={step.number} className="method-card">
                   <span className="method-step-number font-display text-sm text-brass">
@@ -440,7 +432,7 @@ function Home() {
                 </article>
               ))}
             </div>
-            <div id="evidence" className="evidence-section mt-14 scroll-mt-24 md:mt-20">
+            <div id="evidence" className="evidence-section mt-10 scroll-mt-24 md:mt-14">
               <p className="eyebrow-dark">Evidence review</p>
               <h3 className="mt-3 font-display text-3xl md:text-4xl">
                 A report should show how the conclusion was reached.
@@ -481,7 +473,7 @@ function Home() {
         </section>
 
         <section id="services" className="services-section scroll-mt-24">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16">
             <div className="services-heading flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="eyebrow-dark">Support matched to the valuation question</p>
@@ -545,7 +537,7 @@ function Home() {
         </section>
 
         <section id="fees" className="scroll-mt-24 bg-paper-2 text-ink">
-          <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16">
             <div className="fees-intro grid gap-8 border-y border-line py-8 md:grid-cols-2 md:items-start md:gap-16 md:py-12">
               <div>
                 <p className="eyebrow-light">04 / Fees</p>
@@ -564,24 +556,11 @@ function Home() {
                 </a>
               </div>
             </div>
-            <figure className="fees-image image-mosaic image-mosaic--wide mt-8">
-              <PhotoTiles
-                src="/cars/adversiq-paint-splash-hero.jpg"
-                alt="Black bespoke hypercar against a dramatic paint-splashed backdrop"
-              />
-              <figcaption className="image-overlay-copy">
-                <span>04 / Scope and fees</span>
-                <strong>
-                  Clear thinking.
-                  <br />
-                  Clearly defined work.
-                </strong>
-                <span>Every assignment begins with an agreed purpose, scope and fee.</span>
-              </figcaption>
-            </figure>
-            <div className="fees-scope-card mt-6 grid gap-7 md:grid-cols-2">
-              <div>
-                <h3>What scope means in practice</h3>
+            <h3 className="fees-scope-heading mt-7 font-display text-2xl">
+              What scope means in practice
+            </h3>
+            <div className="fees-scope-grid mt-4 grid gap-4 md:grid-cols-2">
+              <div className="fees-scope-card">
                 <h4>Included in scope</h4>
                 <ul>
                   <li>Agreed scope</li>
@@ -589,7 +568,7 @@ function Home() {
                   <li>Report to agreed basis</li>
                 </ul>
               </div>
-              <div>
+              <div className="fees-scope-card">
                 <h4>Separate unless included in writing</h4>
                 <ul>
                   <li>Agreed travel</li>
@@ -607,7 +586,7 @@ function Home() {
         </section>
 
         <section id="principal" className="about-section scroll-mt-24">
-          <div className="about-shell mx-auto max-w-7xl py-16 md:py-24">
+          <div className="about-shell mx-auto max-w-7xl py-12 md:py-16">
             <figure className="principal-feature image-mosaic image-mosaic--wide">
               <PhotoTiles
                 src="/cars/adversiq-painted-porsche.jpg"
@@ -672,7 +651,7 @@ function Home() {
         <section id="enquire" className="enquiry-section scroll-mt-24 border-t border-border bg-bg">
           <div
             id="engage"
-            className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[0.78fr_1.22fr] md:px-10 md:py-24 lg:gap-16"
+            className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[0.78fr_1.22fr] md:px-10 md:py-16 lg:gap-16"
           >
             <div className="self-start">
               <p className="eyebrow-dark">Begin a conversation</p>
