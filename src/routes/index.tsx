@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroUrl from "./assets/hero-vehicle.jpg";
-import globalUrl from "./assets/adversiq-hero-emerald-hypercar.jpg";
-import methodBackgroundUrl from "./assets/cross-border-green-hypercar.jpg";
-import fieldPhotoUrl from "./assets/be63a72ad81b27f2-image_20261112_111409.webp";
+import crossBorderPhotoUrl from "./assets/melbourne-coastal-vehicles.webp";
 import feesUrl from "./assets/0c0c2f15d5012543-image_20261111_200315.webp";
 import aboutUrl from "./assets/cd05e7186820a95e-image_20261111_182933.webp";
 
@@ -237,236 +235,110 @@ function App() {
 
       <GraniteStrip />
 
-      {/* GLOBAL */}
-      <section id="global" className="border-t border-[#D8D0BE] bg-[var(--bone)] py-[160px]">
-        <div className="mx-auto grid max-w-[1240px] gap-[96px] px-4 sm:px-6 lg:grid-cols-12 lg:gap-[96px] lg:px-8">
-          <div className="lg:col-span-5">
-            <div className="lg:sticky lg:top-[112px]">
-              <Reveal>
-                <p className="eyebrow">Global Market Context</p>
-                <h2 className="serif mt-6 text-[clamp(36px,4.8vw,60px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
-                  Borderless assets. Uneven information.{" "}
-                  <em className="italic text-[var(--gold-deep)]">Evidence-led</em> research.
-                </h2>
-                <p className="mt-7 text-[18px] leading-[1.8]">
-                  One-off and limited-production vehicles can attract buyers well beyond their
-                  country of origin. Their relevant market may be international, so we research
-                  transactions across borders where they offer meaningful evidence and explain why
-                  each comparison does—or does not—apply.
-                </p>
-                <div className="mt-12 border-l border-l-[var(--gold)] p-8 pl-8">
-                  <p className="serif text-[17px] italic leading-relaxed text-black">
-                    One vehicle. More than one market.
-                  </p>
-                  <p className="mt-3 text-[15px] leading-relaxed text-[#5A564E]">
-                    A vehicle&apos;s appeal is not confined to one country. Relevant comparisons
-                    depend on where informed buyers seek and trade that vehicle—and on the question
-                    the report must answer.
-                  </p>
-                </div>
-                <div className="mt-6 border border-white/15 bg-[var(--paper)] p-6">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[var(--gold)]">
-                    Beyond the standard specification
-                  </p>
-                  <p className="mt-3 text-[15px] leading-[1.8] text-[var(--muted)]">
-                    Modifications and rarity do not automatically add value. We document what
-                    changed, who completed the work and what records support it, then assess whether
-                    market evidence recognises a premium, calls for different comparisons, or
-                    supports no measurable uplift.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-          <div className="lg:col-span-7">
-            <Reveal>
-              <figure className="m-0 w-full">
-                <div className="img-zoom border border-[var(--gold)]">
-                  <img
-                    src={globalUrl}
-                    alt="Emerald hypercar against a colourful paint-splashed backdrop"
-                    className="h-[72vh] min-h-[380px] w-full object-cover"
-                  />
-                </div>
-                <figcaption className="caption mt-4">
-                  International perspective — finding the relevant market for each vehicle.
-                </figcaption>
-              </figure>
-              <div className="mt-12 border-t border-[#D8D0BE]">
-                <div className="grid grid-cols-12 gap-4 border-b border-[#D8D0BE] py-6">
-                  <p className="col-span-12 text-[13px] font-bold uppercase tracking-[0.14em] sm:col-span-4">
-                    Supercars &amp; Hypercars
-                  </p>
-                  <p className="col-span-12 text-[15px] leading-relaxed sm:col-span-8">
-                    Ferrari · Porsche · Mercedes-Benz · Aston Martin · Lamborghini
-                  </p>
-                </div>
-                <div className="grid grid-cols-12 gap-4 border-b border-[#D8D0BE] py-6">
-                  <p className="col-span-12 text-[13px] font-bold uppercase tracking-[0.14em] sm:col-span-4">
-                    Coachbuilders
-                  </p>
-                  <p className="col-span-12 text-[15px] leading-relaxed sm:col-span-8">
-                    Singer · Mansory · Brabus · Bespoke Builds
-                  </p>
-                </div>
+      <section id="global" className="border-t border-[#D8D0BE] bg-[var(--bone)] py-[120px] sm:py-[160px]">
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="eyebrow">Global Market Context</p>
+            <h2 className="serif mt-6 max-w-[980px] text-[clamp(40px,6vw,76px)] font-normal leading-[0.98] tracking-[-0.03em] text-black">
+              Distinctive vehicles.{" "}
+              <em className="italic text-[var(--gold-deep)]">A wider field of evidence.</em>
+            </h2>
+            <p className="mt-7 max-w-[850px] text-[18px] leading-[1.8]">
+              One-off, limited-production and coachbuilt vehicles can attract buyers around the
+              world, while standard price guides and local comparisons may miss what makes each one
+              different. We establish what the vehicle is, identify the market or markets relevant
+              to the assignment, and explain what the available evidence can—and cannot—support.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <figure className="mt-12">
+              <div className="img-zoom border border-[var(--gold)]">
+                <img
+                  src={crossBorderPhotoUrl}
+                  alt="A silver gullwing coupe and a black hypercar on Melbourne's coastal road beneath storm clouds"
+                  className="h-[clamp(300px,55vw,620px)] w-full object-cover object-center"
+                />
               </div>
-            </Reveal>
-          </div>
-        </div>
-        <Reveal>
-          <div className="mx-auto mt-16 grid max-w-[1240px] gap-8 border border-white/15 bg-[var(--paper)] p-7 sm:p-10 lg:grid-cols-12 lg:items-start lg:px-12">
-            <div className="lg:col-span-5">
-              <p className="eyebrow !text-[var(--gold)]">Cross-Border Perspective</p>
-              <h3 className="serif mt-5 text-[clamp(26px,3vw,36px)] font-normal leading-tight text-[var(--text)]">
-                Distinctive vehicles. A wider field of evidence.
-              </h3>
+              <figcaption className="caption mt-4">
+                Two distinctive vehicles. One wider field of evidence.
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-16 grid gap-px border border-white/15 bg-white/15 md:grid-cols-3">
+              {[
+                [
+                  "MARKET",
+                  "A vehicle's appeal is not confined to one country. We consider relevant buyer demand, availability and comparable transactions across borders—not simply the nearest market.",
+                ],
+                [
+                  "VEHICLE",
+                  "We assess identity, specification, provenance, condition and documented changes. Rarity or modifications alone do not prove a premium; the evidence must show whether buyers recognise one.",
+                ],
+                [
+                  "PURPOSE",
+                  "The intended decision sets the valuation basis, effective date and scope. We explain the evidence, assumptions and limitations that shape the opinion.",
+                ],
+              ].map(([title, description]) => (
+                <article key={title} className="bg-[var(--paper)] p-7 sm:p-9">
+                  <p className="eyebrow !text-[var(--gold)]">{title}</p>
+                  <p className="mt-4 text-[15px] leading-[1.8] text-[var(--muted)]">
+                    {description}
+                  </p>
+                </article>
+              ))}
             </div>
-            <div className="lg:col-span-7">
-              <p className="text-[17px] leading-[1.8] text-[var(--muted)]">
-                We assess each vehicle against relevant market evidence, which may extend beyond
-                national borders, and the decision the report is intended to support.
-              </p>
-              <p className="mt-5 text-[13px] font-bold uppercase leading-relaxed tracking-[0.1em] text-[var(--text)]">
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-20">
+              <p className="eyebrow">From question to conclusion</p>
+              <h3 className="serif mt-5 max-w-[760px] text-[clamp(32px,4.5vw,54px)] font-normal leading-tight text-black">
+                A clear brief. A considered assessment. A reasoned report.
+              </h3>
+              <div className="mt-10 grid gap-8 md:grid-cols-3">
+                {[
+                  [
+                    "01 — Define the brief",
+                    "Agree the intended use, valuation basis, relevant market, effective date and scope.",
+                  ],
+                  [
+                    "02 — Establish the vehicle",
+                    "Review its identity, specification, records, provenance, condition and significant changes.",
+                  ],
+                  [
+                    "03 — Explain the evidence",
+                    "Test relevant comparisons and set out the reasoning, assumptions and limitations behind the opinion.",
+                  ],
+                ].map(([title, description]) => (
+                  <article key={title} className="border-t border-[var(--gold)] pt-5">
+                    <h4 className="serif text-[22px] font-normal text-black">{title}</h4>
+                    <p className="mt-3 text-[15px] leading-[1.8] text-[var(--muted)]">
+                      {description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-16 border-l-2 border-[var(--gold)] bg-[var(--paper)] px-6 py-7 sm:px-9">
+              <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[var(--text)]">
                 For remote buyers, brokers, collectors, insurers, import and customs matters, legal
                 disputes, and estate decisions.
               </p>
-              <p className="mt-5 text-[13px] leading-relaxed text-[var(--muted)]">
-                Reports are prepared to an agreed scope. Their suitability depends on the
+              <p className="mt-4 max-w-[1000px] text-[13px] leading-relaxed text-[var(--muted)]">
+                Each report is prepared to an agreed scope. Its suitability depends on the
                 requirements of the relevant court, insurer, customs authority or other
-                decision-maker. Applicable standards vary by jurisdiction and intended use.
+                decision-maker; applicable standards vary by jurisdiction and intended use.
               </p>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      <GraniteStrip />
-
-      {/* FIELD NOTES — GRANITE */}
-      <section id="notes" className="granite text-[#F2EFE9]">
-        <div className="grid items-start gap-0 lg:grid-cols-[48%_52%]">
-          <figure className="relative m-0 h-[58vh] w-full lg:sticky lg:top-0 lg:h-screen lg:min-h-[640px]">
-            <div className="img-zoom absolute inset-0 border-b border-b-[var(--gold)] lg:border-b-0 lg:border-r lg:border-r-[var(--gold)]">
-              <img
-                src={fieldPhotoUrl}
-                alt="Close rear-quarter view of a painted Porsche, showing its bodywork, wing, wheel, and provenance details"
-                className="absolute inset-0 h-full w-full object-cover object-center"
-              />
-            </div>
-          </figure>
-          <div className="granite px-5 py-[96px] sm:px-8 lg:px-12 lg:py-[160px]">
-            <Reveal>
-              <p className="eyebrow !text-[var(--gold)]">Field Notes</p>
-              <h2 className="serif mt-6 text-[clamp(34px,4vw,52px)] font-normal leading-[1.0] tracking-[-0.02em] text-[#F2EFE9]">
-                Three factors shape{" "}
-                <em className="italic text-[var(--gold)]">every opinion.</em>
-              </h2>
-              <p className="mt-6 text-[18px] leading-[1.8] text-[#EDEDEA]/90">
-                Each has a distinct role in the analysis.
+              <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">
+                Specialist marques and coachbuilders include Ferrari, Porsche, Mercedes-Benz, Aston
+                Martin, Lamborghini, Singer, Mansory, Brabus and bespoke builds.
               </p>
-            </Reveal>
-            <Reveal>
-              <div className="mt-12 border-t border-white/20">
-                {[
-                  ["MARKET", "Buyer demand and comparable transactions in the relevant market."],
-                  [
-                    "VEHICLE",
-                    "Verified identity, specification, provenance, condition and documented changes.",
-                  ],
-                  [
-                    "PURPOSE",
-                    "The decision, valuation basis and effective date agreed for the assignment.",
-                  ],
-                ].map(([t, d]) => (
-                  <div
-                    key={t}
-                    className="grid grid-cols-12 items-baseline gap-4 border-b border-white/20 py-6"
-                  >
-                    <h3 className="serif col-span-12 text-[20px] font-normal text-[#F2EFE9] sm:col-span-4">
-                      {t}
-                    </h3>
-                    <p className="col-span-12 text-[15px] leading-relaxed text-[#EDEDEA]/70 sm:col-span-8">
-                      {d}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-10 border-y border-[var(--gold)] py-6 text-center text-[clamp(18px,2.2vw,28px)] font-bold uppercase leading-snug tracking-[0.08em] text-[#F2EFE9]">
-                Evidence in context
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <GraniteStrip />
-
-      {/* METHOD */}
-      <section id="method" className="relative isolate overflow-hidden py-[160px] text-white">
-        <img
-          src={methodBackgroundUrl}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 -z-10 bg-[#090B0E]/85" aria-hidden="true" />
-        <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-[96px] lg:grid-cols-12">
-            <div className="lg:col-span-9">
-              <Reveal>
-                <p className="eyebrow">Method</p>
-                <h2 className="serif mt-6 text-[clamp(36px,4vw,52px)] font-normal leading-[1.0] tracking-[-0.02em] text-white">
-                  From Question to <em className="italic text-[var(--gold-deep)]">Conclusion</em>
-                </h2>
-                <h3 className="serif mt-6 text-[clamp(24px,2.5vw,28px)] italic font-normal leading-[1.1] text-white">
-                  A considered valuation has a clear point of reference.
-                </h3>
-                <div className="grid gap-8 md:grid-cols-2">
-                  <p className="dropcap mt-7 text-[18px] leading-[1.8] text-white/85">
-                    We first agree in writing on the intended use, valuation basis, relevant market
-                    or markets, effective date, and scope. This keeps all research strictly tied to
-                    the decision ahead.
-                  </p>
-                  <p className="mt-7 text-[18px] leading-[1.8] text-white/85">
-                    Then we assess the vehicle as it exists today—its identity, specification,
-                    provenance, condition, and significant changes—against the available evidence.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-          <Reveal>
-            <h3 className="serif mt-24 text-[clamp(32px,3.5vw,44px)] font-normal text-black">
-              How We Assess the Evidence
-            </h3>
-            <div className="relative mt-10 grid gap-10 md:grid-cols-3">
-              <div
-                className="absolute left-0 right-0 top-[6px] hidden h-px bg-[#D8D0BE] md:block"
-                aria-hidden="true"
-              />
-              {[
-                [
-                  "Define the brief",
-                  "Agree the purpose, valuation basis, relevant market or markets, date, and scope.",
-                ],
-                [
-                  "Understand the vehicle",
-                  "Review identity, specification, provenance, condition, and significant restoration or modification.",
-                ],
-                [
-                  "Assess and explain",
-                  "Test relevant market evidence, then explain the reasoning, assumptions, and limitations.",
-                ],
-              ].map(([t, d]) => (
-                <div key={t} className="relative border-t border-[#D8D0BE] pt-6 md:border-t-0">
-                  <span
-                    className="relative z-10 block h-[13px] w-[13px] rounded-full bg-[#C6A664]"
-                    aria-hidden="true"
-                  />
-                  <h4 className="serif mt-4 text-[24px] font-normal text-black">{t}</h4>
-                  <p className="mt-3 text-[18px] leading-[1.8]">{d}</p>
-                </div>
-              ))}
             </div>
           </Reveal>
         </div>
