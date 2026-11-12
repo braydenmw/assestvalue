@@ -178,7 +178,7 @@ function App() {
       >
         <img
           src={heroUrl}
-          alt="Black carbon hypercar with gold accents in front of red, yellow and blue paint splashes"
+          alt="Lime-green supercar speeding through a city as a colorful paint wave bursts behind it"
           className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
         />
         <div
@@ -304,17 +304,17 @@ function App() {
                 </article>
               ))}
             </div>
-            <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:items-start">
-              <figure className="relative m-0 pt-4 pr-4 lg:col-span-5">
+            <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:items-stretch">
+              <figure className="relative m-0 pt-4 pr-4 lg:col-span-5 lg:flex lg:flex-col lg:self-stretch">
                 <div
                   aria-hidden="true"
                   className="absolute right-0 top-0 h-[52%] w-[72%] border-r-2 border-t-2 border-[var(--gold)]"
                 />
-                <div className="img-zoom relative z-10 border border-[var(--gold)]">
+                <div className="img-zoom relative z-10 border border-[var(--gold)] lg:flex-1">
                   <img
                     src={specialisationImageUrl}
                     alt="Green supercar speeding through a city as colorful paint bursts behind it"
-                    className="aspect-[4/3] w-full object-cover object-center"
+                    className="aspect-[4/3] w-full object-cover object-center lg:h-full lg:aspect-auto"
                   />
                 </div>
                 <svg
