@@ -179,19 +179,7 @@ function Home() {
             <a className="transition-colors hover:text-brass" href="#principal">
               About
             </a>
-            <a
-              className="grid min-h-11 place-items-center border border-brass bg-brass px-4 text-ink transition-colors hover:bg-paper hover:text-ink"
-              href="#enquire"
-            >
-              Enquire
-            </a>
           </nav>
-          <a
-            className="grid min-h-11 shrink-0 place-items-center border border-brass bg-brass px-4 text-[10px] font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-paper hover:text-ink md:hidden"
-            href="#enquire"
-          >
-            Enquire
-          </a>
         </div>
         <nav
           aria-label="Mobile navigation"
@@ -216,8 +204,8 @@ function Home() {
         <section className="hero-editorial relative z-10 isolate flex min-h-[34rem] items-end overflow-hidden border-b border-border sm:min-h-[36rem] lg:min-h-[min(46rem,calc(100svh-5rem))]">
           <img
             className="hero-image"
-            src="/cars/adversiq-blue-paint-burst-hypercar.jpg"
-            alt="A dark blue performance car framed by a burst of color"
+            src="/cars/adversiq-hero-black-paint-hypercar.jpg"
+            alt="Black carbon-fibre hypercar framed by vivid paint splashes"
             fetchPriority="high"
           />
           <div aria-hidden="true" className="hero-editorial-shade absolute inset-0" />
@@ -329,11 +317,11 @@ function Home() {
               <div className="fieldnote-stack">
                 <img
                   className="practice-card-image"
-                  src={ISSUES[1].image}
-                  alt={ISSUES[1].alt}
+                  src="/cars/adversiq-fieldnotes-green-hypercar.jpg"
+                  alt="Green hypercar against a sweeping rainbow paint backdrop"
                   loading="lazy"
                 />
-                <p className="image-caption">Painted Porsche / Rare, reimagined, hand-finished.</p>
+                <p className="image-caption">Rare, reimagined, hand-finished.</p>
                 <article className="practice-card practice-card-2">
                   <div className="practice-card-copy">
                     <span className="fieldnote-number">02</span>
@@ -432,6 +420,29 @@ function Home() {
                 </article>
               ))}
             </div>
+            <div className="method-photo-gallery mt-8 grid gap-4 md:grid-cols-3">
+              <figure>
+                <img
+                  src="/cars/method-rear-quarter-detail.jpg"
+                  alt="Rear quarter, wheel and wing of a black hypercar"
+                  loading="lazy"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="/cars/method-front-cockpit-detail.jpg"
+                  alt="Top-down view across a hypercar's windscreen and carbon-fibre bonnet"
+                  loading="lazy"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="/cars/method-side-body-detail.jpg"
+                  alt="Close side view of a hypercar's carbon-fibre body, door and side intake"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
             <div id="evidence" className="evidence-section mt-10 scroll-mt-24 md:mt-14">
               <p className="eyebrow-dark">Evidence review</p>
               <h3 className="mt-3 font-display text-3xl md:text-4xl">
@@ -508,7 +519,7 @@ function Home() {
                 alt="Orange and white performance car in a vivid neon paint workshop"
               />
               <figcaption className="image-overlay-copy image-overlay-copy--right">
-                <span>ADVERSIQ / Cross-border perspective</span>
+                <span>Cross-border perspective</span>
                 <strong>
                   Distinctive vehicles.
                   <br />A wider field of evidence.
