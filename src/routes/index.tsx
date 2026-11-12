@@ -317,8 +317,8 @@ function Home() {
               <div className="fieldnote-stack">
                 <img
                   className="practice-card-image"
-                  src="/cars/adversiq-fieldnotes-green-hypercar.jpg"
-                  alt="Green hypercar against a sweeping rainbow paint backdrop"
+                  src="/cars/adversiq-fieldnotes-porsche-rear-detail.jpg"
+                  alt="Close rear-quarter view of a painted Porsche, showing its bodywork, wing and wheel"
                   loading="lazy"
                 />
                 <article className="practice-card practice-card-2">
@@ -512,37 +512,26 @@ function Home() {
                 </article>
               ))}
             </div>
-            <figure className="services-feature image-mosaic image-mosaic--wide mt-8">
-              <PhotoTiles
-                src="/cars/adversiq-neon-workshop-hypercar.jpg"
-                alt="Orange and white performance car in a vivid neon paint workshop"
+            <figure className="services-feature image-mosaic image-mosaic--wide cross-border-feature mt-8">
+              <img
+                className="cross-border-photo"
+                src="/cars/adversiq-fieldnotes-green-hypercar.jpg"
+                alt="Green hypercar framed by a sweeping rainbow paint backdrop"
+                loading="lazy"
               />
               <figcaption className="image-overlay-copy image-overlay-copy--right">
-                <span>Cross-border perspective</span>
+                <span>Cross-Border Perspective</span>
                 <strong>
                   Distinctive vehicles.
                   <br />A wider field of evidence.
                 </strong>
                 <span>Market context is researched for the vehicle and the question at hand.</span>
+                <p className="cross-border-audience">
+                  For — Remote Buyers · Brokers · Collectors · Insurers · Import &amp; Customs ·
+                  Legal &amp; Disputes · Estate
+                </p>
               </figcaption>
             </figure>
-            <div
-              className="audience-list mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[10px] font-medium uppercase tracking-[0.1em] text-fg/65"
-              aria-label="Clients we support"
-            >
-              <strong>For</strong>
-              {[
-                "Remote buyers",
-                "Brokers",
-                "Collectors",
-                "Insurers",
-                "Import & customs",
-                "Legal & disputes",
-                "Estate",
-              ].map((audience) => (
-                <span key={audience}>{audience}</span>
-              ))}
-            </div>
           </div>
         </section>
 

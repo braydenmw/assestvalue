@@ -1254,6 +1254,30 @@ main p {
   line-height: 1.6;
 }
 
+.cross-border-feature::after {
+  background: linear-gradient(90deg, rgb(9 9 8 / 4%) 18%, rgb(9 9 8 / 24%) 46%, rgb(9 9 8 / 76%) 100%);
+}
+
+.cross-border-feature .cross-border-photo {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+}
+
+.cross-border-audience {
+  margin: 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
 .principal-feature {
   min-height: clamp(25rem, 50vw, 44rem);
 }
@@ -1312,5 +1336,9 @@ main p {
   .image-overlay-copy span:first-child {
     font-size: 0.58rem;
     letter-spacing: 0.12em;
+  }
+
+  .cross-border-feature::after {
+    background: linear-gradient(0deg, rgb(9 9 8 / 86%) 0%, rgb(9 9 8 / 54%) 55%, rgb(9 9 8 / 5%) 100%);
   }
 }
