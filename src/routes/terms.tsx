@@ -75,9 +75,9 @@ const TERMS = [
     content: (
       <>
         <p>
-          ADVERSIQ specializes in rare, limited-series, coachbuilt, and restomod vehicles where
-          traditional price guides fail due to <strong>information asymmetry</strong>. To bridge
-          this gap, our reporting methodology incorporates self-certified evidentiary rules:
+          ADVERSIQ focuses on one-off, limited-production, coachbuilt and substantially transformed
+          vehicles that can be difficult to compare with standard models. We document the vehicle
+          and assess relevant market evidence, making any unsupported records or assumptions clear:
         </p>
         <ul className="list-disc space-y-3 pl-6">
           <li>
@@ -329,7 +329,7 @@ const TERMS = [
 
 function Terms() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="terms-shell min-h-screen bg-white text-black">
       <header className="border-b border-neutral-300 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <a href="/" className="flex items-center gap-3">

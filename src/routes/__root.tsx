@@ -14,9 +14,9 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Independent Fair Market Value opinions for complex, modified and exotic vehicles. Comparable sales methodology — not price guides or statutory formulas.",
+          "Independent, evidence-led valuations of one-off, limited-production, coachbuilt and transformed vehicles. Detailed reports assess the vehicle, its relevant market and the valuation purpose.",
       },
-      { name: "theme-color", content: "#0e0c0a" },
+      { name: "theme-color", content: "#090b0e" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
