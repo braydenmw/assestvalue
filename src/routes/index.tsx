@@ -84,13 +84,13 @@ function App() {
 
   const services = [
     {
-      t: "Desktop evidence reviews",
-      d: "Evidence and comparisons reviewed from records, images and documents supplied.",
+      t: "Desktop valuation",
+      d: "A valuation based on records, images and documents supplied, with relevant market comparisons explained.",
       who: "Owners, buyers, sellers and brokers who need an informed view before a decision.",
       note: "A desktop review cannot verify physical condition, diagnostic results or hidden repairs.",
     },
     {
-      t: "On-site physical inspections",
+      t: "On-site valuation",
       d: "By arrangement, we inspect the vehicle and compare its observed specification and condition with available records.",
       who: "Owners, collectors and insurers who need an in-person assessment.",
       note: "Specialist mechanical or diagnostic testing is outside scope unless separately agreed.",
@@ -203,33 +203,29 @@ function App() {
         </p>
       </section>
 
-      {/* WHO WE ARE, WHAT WE DO, WHO WE HELP */}
-      <section className="bg-[var(--bone)] py-16 sm:py-20" aria-label="ADVERSIQ overview">
-        <div className="mx-auto grid max-w-[1240px] gap-px border-y border-white/15 bg-white/15 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
-          <article className="bg-[var(--paper)] p-7 sm:p-8">
-            <p className="eyebrow">Who we are</p>
-            <p className="mt-4 text-[16px] leading-[1.8] text-[var(--muted)]">
-              An independent specialist valuation advisory led by Melbourne-based valuer Brayden
-              Walls, with over 20 years in motor vehicle sales and more than seven years in
-              specialist valuation practice.
-            </p>
-          </article>
-          <article className="bg-[var(--paper)] p-7 sm:p-8">
-            <p className="eyebrow">What we do</p>
-            <p className="mt-4 text-[16px] leading-[1.8] text-[var(--muted)]">
-              Identify and document exceptional vehicles, research relevant markets, and explain
-              whether evidence supports a value beyond a standard example. Modifications alone do
-              not establish a premium.
-            </p>
-          </article>
-          <article className="bg-[var(--paper)] p-7 sm:p-8">
-            <p className="eyebrow">Who we help</p>
-            <p className="mt-4 text-[16px] leading-[1.8] text-[var(--muted)]">
-              Owners and collectors substantiating what makes their vehicle distinct, plus buyers,
-              brokers, insurers, lawyers, executors, importers and exporters making informed
-              decisions.
-            </p>
-          </article>
+      {/* OPENING */}
+      <section className="bg-[var(--bone)] py-[88px] sm:py-[112px]" aria-label="Why ADVERSIQ">
+        <div className="mx-auto grid max-w-[1240px] gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+          <div className="lg:col-span-8">
+            <Reveal>
+              <p className="eyebrow">A vehicle is more than its guide price</p>
+              <h2 className="serif mt-6 max-w-[900px] text-[clamp(36px,5vw,62px)] font-normal leading-[1.02] tracking-[-0.03em] text-black">
+                You know it is something more than a car.
+              </h2>
+              <p className="mt-7 max-w-[780px] text-[18px] leading-[1.8] text-[var(--muted)]">
+                You know its story and why it is different. What may be missing is clear,
+                independent evidence showing what makes it distinct—and what that difference is
+                worth.
+              </p>
+            </Reveal>
+          </div>
+          <div className="flex items-end lg:col-span-4">
+            <Reveal>
+              <p className="border-l-2 border-[var(--gold)] pl-6 text-[22px] leading-snug text-[var(--text)]">
+                That is what ADVERSIQ does.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -240,14 +236,14 @@ function App() {
           <Reveal>
             <p className="eyebrow">Global Market Context</p>
             <h2 className="serif mt-6 max-w-[980px] text-[clamp(40px,6vw,76px)] font-normal leading-[0.98] tracking-[-0.03em] text-black">
-              Distinctive vehicles.{" "}
-              <em className="italic text-[var(--gold-deep)]">A wider field of evidence.</em>
+              Borderless assets. Uneven information.{" "}
+              <em className="italic text-[var(--gold-deep)]">Evidence-led research.</em>
             </h2>
             <p className="mt-7 max-w-[850px] text-[18px] leading-[1.8]">
-              One-off, limited-production and coachbuilt vehicles can attract buyers around the
-              world, while standard price guides and local comparisons may miss what makes each one
-              different. We establish what the vehicle is, identify the market or markets relevant
-              to the assignment, and explain what the available evidence can—and cannot—support.
+              One-off, limited-production, coachbuilt and substantially transformed vehicles can
+              attract buyers around the world. Standard guides may not capture their specification
+              or story. We establish what the vehicle is, identify the market relevant to the
+              decision, and explain what the evidence can—and cannot—support.
             </p>
           </Reveal>
 
@@ -326,18 +322,10 @@ function App() {
 
           <Reveal>
             <div className="mt-16 border-l-2 border-[var(--gold)] bg-[var(--paper)] px-6 py-7 sm:px-9">
-              <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[var(--text)]">
-                For remote buyers, brokers, collectors, insurers, import and customs matters, legal
-                disputes, and estate decisions.
-              </p>
-              <p className="mt-4 max-w-[1000px] text-[13px] leading-relaxed text-[var(--muted)]">
-                Each report is prepared to an agreed scope. Its suitability depends on the
+              <p className="max-w-[1000px] text-[13px] leading-relaxed text-[var(--muted)]">
+                Every report is prepared to an agreed scope. Its suitability depends on the
                 requirements of the relevant court, insurer, customs authority or other
                 decision-maker; applicable standards vary by jurisdiction and intended use.
-              </p>
-              <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">
-                Specialist marques and coachbuilders include Ferrari, Porsche, Mercedes-Benz, Aston
-                Martin, Lamborghini, Singer, Mansory, Brabus and bespoke builds.
               </p>
             </div>
           </Reveal>
@@ -353,15 +341,15 @@ function App() {
             <div className="mx-auto max-w-[900px] text-center">
               <p className="eyebrow">Services</p>
               <p className="mt-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
-                Support Matched to the Valuation Question
+                Who we do it for
               </p>
               <h2 className="serif mt-6 text-[clamp(36px,4.5vw,56px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
-                Four ways we support complex vehicle{" "}
-                <em className="italic text-[var(--gold-deep)]">assessments.</em>
+                For people who know their vehicle is{" "}
+                <em className="italic text-[var(--gold-deep)]">more than a car.</em>
               </h2>
               <p className="mx-auto mt-5 max-w-[760px] text-[18px] leading-[1.8]">
-                Select the service that best matches your question. Your choice will be added to the
-                enquiry form.
+                Whether you are establishing a vehicle&apos;s story, preparing for a decision, or
+                trying to substantiate what makes it distinct, we explain what the evidence supports.
               </p>
               {service && (
                 <p className="mt-6 inline-block border-b border-[var(--gold)] pb-1 text-[14px] font-bold text-black">
@@ -370,6 +358,42 @@ function App() {
               )}
             </div>
           </Reveal>
+          <Reveal>
+            <div className="mt-12 grid gap-px border border-white/15 bg-white/15 md:grid-cols-3">
+              {[
+                [
+                  "For collectors",
+                  "To substantiate what makes a vehicle distinct—for insurance, a sale, an estate, or their own records.",
+                ],
+                [
+                  "For those who love their vehicle",
+                  "To have its history, restoration and care understood as part of the evidence—not reduced to a guide price.",
+                ],
+                [
+                  "For those still finding the proof",
+                  "To investigate a vehicle that feels special but is difficult to explain through standard comparisons alone.",
+                ],
+              ].map(([title, description]) => (
+                <article key={title} className="bg-[var(--paper)] p-7 sm:p-9">
+                  <h3 className="serif text-[23px] font-normal text-[var(--text)]">{title}</h3>
+                  <p className="mt-4 text-[15px] leading-[1.8] text-[var(--muted)]">
+                    {description}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <p className="mt-7 text-center text-[14px] leading-relaxed text-[var(--muted)]">
+              We also work with buyers, brokers, insurers, lawyers, executors, importers, exporters
+              and customs advisers who need an informed, independent valuation.
+            </p>
+          </Reveal>
+          <h3 className="serif mt-20 text-[clamp(28px,3.8vw,40px)] font-normal text-black">
+            Valuations and reports, matched to the decision
+          </h3>
+          <p className="mt-3 max-w-[740px] text-[16px] leading-[1.8] text-[var(--muted)]">
+            Select the service that best matches your question. Your choice will be added to the
+            enquiry form.
+          </p>
           <div className="mt-16 border-t border-[#D8D0BE]">
             <div className="hidden grid-cols-12 gap-6 border-b border-[#D8D0BE] py-3 text-[12px] font-bold uppercase tracking-[0.14em] text-[#5A564E] md:grid">
               <p className="col-span-5">Service</p>
@@ -426,9 +450,10 @@ function App() {
               </h2>
               <p className="mx-auto mt-6 max-w-[720px] text-[18px] leading-[1.8]">
                 All assignments are quoted individually on a Price on Application (POA) basis.
-                Quoted fees reflect each vehicle&apos;s provenance complexity, market research
-                depth, geographical location, and evidentiary requirements. No research or travel
-                commences until terms are agreed and confirmed in writing.
+                After understanding the vehicle and decision ahead, we confirm the valuation type,
+                scope and fee in writing before work begins. Fees reflect provenance complexity,
+                research depth, location and evidentiary requirements. No research or travel
+                commences until terms are agreed.
               </p>
               <button
                 onClick={() => scrollToId("contact")}
@@ -467,7 +492,8 @@ function App() {
                   Tailored collection schedules apply to multi-vehicle portfolios
                 </li>
                 <li className="border-y border-[#D8D0BE] py-3">
-                  Fixed-fee guarantee once signed by both parties
+                  The agreed fee is fixed once scope and terms are confirmed in writing; additional
+                  work requires agreement
                 </li>
               </ul>
             </div>
@@ -489,9 +515,9 @@ function App() {
           </div>
           <div className="granite mt-10 p-5 text-center text-[#F2EFE9] sm:p-5">
             <p className="text-[18px] leading-[1.8]">
-              Structured retainer and payment terms: engagement operates on a transparent 30%
-              non-refundable deposit upon written execution, with the remaining 70% balance due upon
-              completion and cleared prior to formal document release.
+              Payment terms: a 30% non-refundable deposit is due before work begins, with the
+              remaining 70% balance due on completion and cleared before the final report is
+              released. The signed engagement agreement sets out the agreed terms.
             </p>
           </div>
         </div>
@@ -516,34 +542,25 @@ function App() {
         </figure>
         <div className="px-6 py-[72px] sm:px-10 lg:px-[72px] lg:py-[72px]">
           <Reveal>
-            <p className="eyebrow">About Brayden Walls / Melbourne</p>
+            <p className="eyebrow">Who we are · Est. Melbourne</p>
             <h2 className="serif mt-6 text-[clamp(32px,3.8vw,48px)] font-normal leading-[1.08] tracking-[-0.02em] text-black">
-              Vehicle market experience, applied to{" "}
-              <em className="italic text-[var(--gold-deep)]">specialist</em> assignments.
+              Independent. Specialist.{" "}
+              <em className="italic text-[var(--gold-deep)]">Evidence-led.</em>
             </h2>
             <p className="mt-6 text-[18px] leading-[1.8]">
-              We take the time to understand the decision you need to make, what matters to you, and
-              the story this vehicle carries.
+              ADVERSIQ is an independent specialist valuation advisory led by Melbourne-based
+              valuer Brayden Walls, with more than 20 years in motor vehicle sales and over seven
+              years in specialist valuation practice. Melbourne-based, with an international
+              perspective.
             </p>
             <blockquote className="hero-serif mt-8 border-l-2 border-[var(--gold)] pl-6 text-[clamp(28px,3vw,34px)] italic leading-snug text-black">
               “Every assignment has a person and a purpose behind it.”
             </blockquote>
             <p className="dropcap mt-7 text-[18px] leading-[1.8]">
-              Brayden Walls is a Melbourne-based vehicle market and valuation professional with more
-              than 20 years of motor vehicle sales experience and over seven years of specialized
-              valuation practice. Having bought and sold vehicles across wholesale and retail tiers,
-              he understands how the story on paper must connect directly to the physical vehicle
-              and the people who trade them.
-            </p>
-            <p className="mt-5 text-[18px] leading-[1.8]">
-              ADVERSIQ focuses on one-off, limited-production, coachbuilt and substantially
-              transformed vehicles that standard comparisons may not adequately describe. Our
-              detailed reports establish the vehicle&apos;s identity, specification, provenance,
-              condition and documented changes, then assess relevant market evidence. We help
-              owners and collectors substantiate what makes their vehicle distinct, while giving
-              buyers, brokers, insurers, lawyers and executors a clear, independent explanation.
-              We do not assume rarity or modifications automatically increase value; any premium
-              must be supported by evidence.
+              Brayden brings real-world experience of how vehicles are bought, sold and understood
+              to each assignment. The work is independent and evidence-led: a vehicle&apos;s story
+              matters, and the report must show how that story connects to its specification,
+              condition, records and relevant market.
             </p>
             <div className="mt-10 border-t border-[#D8D0BE]">
               <p className="flex gap-3 border-b border-[#D8D0BE] py-4 text-[15px] leading-relaxed">
@@ -562,7 +579,7 @@ function App() {
                 <span className="text-[var(--gold-deep)]" aria-hidden="true">
                   —
                 </span>
-                Wholesale and retail experience, applied to specialist assignments
+                Independent valuation advisory with international market perspective
               </p>
             </div>
           </Reveal>
@@ -582,9 +599,9 @@ function App() {
                 <em className="italic text-[var(--gold)]">the decision</em> ahead.
               </h2>
               <p className="mt-6 max-w-[620px] text-[18px] leading-[1.8] text-[#EDEDEA]/90">
-                You do not need to have every vehicle detail ready. A short note about what prompted
-                the valuation, the decision ahead and any timing is enough to start. We can clarify
-                the rest together.
+                If you have something special but are not sure how to prove it is more than a car,
+                you are exactly who we are here for. Tell us what you have and what decision you
+                need to make. We will help you understand what the evidence supports.
               </p>
               <div className="mt-12 border-t border-white/20">
                 <div className="grid grid-cols-12 gap-4 border-b border-white/20 py-5">
