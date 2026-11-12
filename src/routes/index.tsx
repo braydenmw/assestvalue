@@ -204,8 +204,8 @@ function Home() {
         <section className="hero-editorial relative z-10 isolate flex min-h-[34rem] items-end overflow-hidden border-b border-border sm:min-h-[36rem] lg:min-h-[min(46rem,calc(100svh-5rem))]">
           <img
             className="hero-image"
-            src="/cars/adversiq-hero-black-paint-hypercar.jpg"
-            alt="Black carbon-fibre hypercar framed by vivid paint splashes"
+            src="/cars/adversiq-hero-emerald-hypercar.jpg"
+            alt="Emerald-green hypercar framed by a dark paint-splashed backdrop"
             fetchPriority="high"
           />
           <div aria-hidden="true" className="hero-editorial-shade absolute inset-0" />
@@ -321,7 +321,6 @@ function Home() {
                   alt="Green hypercar against a sweeping rainbow paint backdrop"
                   loading="lazy"
                 />
-                <p className="image-caption">Rare, reimagined, hand-finished.</p>
                 <article className="practice-card practice-card-2">
                   <div className="practice-card-copy">
                     <span className="fieldnote-number">02</span>
