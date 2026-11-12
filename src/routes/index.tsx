@@ -249,16 +249,19 @@ function App() {
                   <em className="italic text-[var(--gold-deep)]">Evidence-led</em> research.
                 </h2>
                 <p className="mt-7 text-[18px] leading-[1.8]">
-                  Limited-production vehicles rarely fit simple price-guide comparisons. Where
-                  local evidence is thin, we research relevant international transactions and
-                  explain why each comparison does—or does not—apply.
+                  One-off and limited-production vehicles can attract buyers well beyond their
+                  country of origin. Their relevant market may be international, so we research
+                  transactions across borders where they offer meaningful evidence and explain why
+                  each comparison does—or does not—apply.
                 </p>
                 <div className="mt-12 border-l border-l-[var(--gold)] p-8 pl-8">
                   <p className="serif text-[17px] italic leading-relaxed text-black">
                     One vehicle. More than one market.
                   </p>
                   <p className="mt-3 text-[15px] leading-relaxed text-[#5A564E]">
-                    The right comparison depends on the vehicle and the question being answered.
+                    A vehicle&apos;s appeal is not confined to one country. Relevant comparisons
+                    depend on where informed buyers seek and trade that vehicle—and on the question
+                    the report must answer.
                   </p>
                 </div>
                 <div className="mt-6 border border-white/15 bg-[var(--paper)] p-6">
@@ -310,6 +313,31 @@ function App() {
             </Reveal>
           </div>
         </div>
+        <Reveal>
+          <div className="mx-auto mt-16 grid max-w-[1240px] gap-8 border border-white/15 bg-[var(--paper)] p-7 sm:p-10 lg:grid-cols-12 lg:items-start lg:px-12">
+            <div className="lg:col-span-5">
+              <p className="eyebrow !text-[var(--gold)]">Cross-Border Perspective</p>
+              <h3 className="serif mt-5 text-[clamp(26px,3vw,36px)] font-normal leading-tight text-[var(--text)]">
+                Distinctive vehicles. A wider field of evidence.
+              </h3>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-[17px] leading-[1.8] text-[var(--muted)]">
+                We assess each vehicle against relevant market evidence, which may extend beyond
+                national borders, and the decision the report is intended to support.
+              </p>
+              <p className="mt-5 text-[13px] font-bold uppercase leading-relaxed tracking-[0.1em] text-[var(--text)]">
+                For remote buyers, brokers, collectors, insurers, import and customs matters, legal
+                disputes, and estate decisions.
+              </p>
+              <p className="mt-5 text-[13px] leading-relaxed text-[var(--muted)]">
+                Reports are prepared to an agreed scope. Their suitability depends on the
+                requirements of the relevant court, insurer, customs authority or other
+                decision-maker. Applicable standards vary by jurisdiction and intended use.
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       <GraniteStrip />
@@ -384,7 +412,7 @@ function App() {
         <div className="absolute inset-0 -z-10 bg-[#090B0E]/85" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-[96px] lg:grid-cols-12">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-9">
               <Reveal>
                 <p className="eyebrow">Method</p>
                 <h2 className="serif mt-6 text-[clamp(36px,4vw,52px)] font-normal leading-[1.0] tracking-[-0.02em] text-white">
@@ -402,23 +430,6 @@ function App() {
                   <p className="mt-7 text-[18px] leading-[1.8] text-white/85">
                     Then we assess the vehicle as it exists today—its identity, specification,
                     provenance, condition, and significant changes—against the available evidence.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-            <div className="lg:col-span-5">
-              <Reveal>
-                <div className="granite border border-[var(--gold)] p-12 text-[#F2EFE9]">
-                  <p className="eyebrow !text-[var(--gold)]">Cross-Border Perspective</p>
-                  <h3 className="serif mt-5 text-[26px] font-normal leading-tight">
-                    Distinctive vehicles. A wider field of evidence.
-                  </h3>
-                  <p className="mt-6 text-[18px] leading-[1.8] text-[#EDEDEA]/90">
-                    Market context is researched for the vehicle and the question at hand.
-                  </p>
-                  <p className="mt-7 text-[13px] font-bold uppercase leading-relaxed tracking-[0.14em] text-[#EDEDEA]/90">
-                    For — Remote Buyers · Brokers · Collectors · Insurers · Import &amp; Customs ·
-                    Legal &amp; Disputes · Estate
                   </p>
                 </div>
               </Reveal>
@@ -457,12 +468,6 @@ function App() {
                 </div>
               ))}
             </div>
-            <p className="mt-10 max-w-[1100px] text-[13px] leading-relaxed text-[#5A564E]">
-              Reports are prepared to an agreed scope. They may support review, but cannot guarantee
-              admissibility or acceptance by a court, insurer, customs authority or other
-              decision-maker. Applicable standards and requirements vary by jurisdiction and
-              intended use.
-            </p>
           </Reveal>
         </div>
       </section>
