@@ -164,9 +164,9 @@ export default function App() {
               A rare vehicle deserves a wider view.
             </h1>
             <p className="mt-6 max-w-[760px] text-[18px] leading-[1.8] text-[#2B2924]">
-              Led by Melbourne valuer Brayden Walls, ADVERSIQ provides desktop reviews, on-site
-              inspections, and defensible valuation reports for rare, coachbuilt, restored, and
-              modified vehicles.
+              Led by Melbourne-based valuer Brayden Walls, ADVERSIQ supports clients in Australia
+              and internationally with desktop reviews, on-site inspections by arrangement, and
+              defensible valuation reports for rare, coachbuilt, restored, and modified vehicles.
             </p>
           </div>
 
@@ -431,7 +431,7 @@ export default function App() {
           <Reveal>
             <div className="max-w-[640px]">
               <p className="eyebrow text-[var(--gold)]">
-                Independent Vehicle Valuations — Melbourne
+                Melbourne-based. International in perspective.
               </p>
               <h1 className="serif mt-7 text-[clamp(48px,7.2vw,94px)] font-normal leading-[1.0] tracking-[-0.02em] text-white">
                 A rare vehicle deserves
@@ -439,9 +439,9 @@ export default function App() {
                 <em className="italic text-[var(--gold)]">a wider view.</em>
               </h1>
               <p className="mt-7 max-w-[600px] text-[18px] leading-[1.75] text-white/85">
-                Led by Melbourne valuer Brayden Walls, ADVERSIQ provides desktop reviews, on-site
-                inspections, and defensible valuation reports for rare, coachbuilt, restored, and
-                modified vehicles.
+                Led by Melbourne-based valuer Brayden Walls, ADVERSIQ supports clients in Australia
+                and internationally with desktop reviews, on-site inspections by arrangement, and
+                defensible valuation reports for rare, coachbuilt, restored, and modified vehicles.
               </p>
               <div className="mt-10 grid grid-cols-3 gap-4 border-t border-[var(--gold)] pt-6 sm:gap-8">
                 <div>
