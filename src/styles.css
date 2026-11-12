@@ -191,8 +191,8 @@ a {
 
 .granite-scrim {
   background-image:
-    linear-gradient(to top, rgb(36 36 38 / 72%), transparent 55%),
-    linear-gradient(to right, rgb(36 36 38 / 60%), transparent 55%);
+    linear-gradient(to top, rgb(36 36 38 / 52%), transparent 55%),
+    linear-gradient(to right, rgb(36 36 38 / 42%), transparent 55%);
 }
 
 .luxury-btn {
@@ -274,7 +274,7 @@ a {
   float: left;
   padding-top: 8px;
   padding-right: 14px;
-  color: var(--granite);
+  color: var(--gold);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 72px;
   line-height: 0.82;
