@@ -396,9 +396,6 @@ function App() {
                 aria-hidden="true"
                 className="absolute inset-0 bg-gradient-to-t from-[#090B0E]/75 via-[#090B0E]/15 to-transparent"
               />
-              <p className="absolute left-5 top-5 z-10 max-w-[120px] text-[11px] font-bold uppercase leading-relaxed tracking-[0.18em] text-[var(--gold)]">
-                Market significance
-              </p>
               <div className="absolute bottom-5 right-5 z-10 w-[88%] border-l border-t border-[var(--gold)] bg-[#090B0E] p-2 sm:bottom-8 sm:right-8 sm:w-[82%]">
                 <img
                   src={audienceImageUrl}
@@ -496,6 +493,15 @@ function App() {
             </Reveal>
           </div>
           <div id="services" className="mt-12 border-t border-[#D8D0BE] pt-8 lg:col-span-12">
+            <div className="mb-8 max-w-[760px]">
+              <h3 className="serif text-[clamp(28px,3vw,40px)] font-normal leading-tight text-black">
+                What type of valuations we do
+              </h3>
+              <p className="mt-4 text-[16px] leading-[1.8] text-[var(--muted)]">
+                We establish what is needed based on the information provided, then ascertain which
+                type of valuation is required.
+              </p>
+            </div>
             <div className="grid gap-10 md:grid-cols-2">
               {services.map((s) => {
                 const selected = service === s.t;
@@ -504,9 +510,9 @@ function App() {
                     key={s.t}
                     className={`border-t border-l-2 px-4 py-6 ${selected ? "border-l-[#C6A664]" : "border-l-transparent hover:border-l-[#C6A664]"}`}
                   >
-                    <h3 className="serif text-[28px] font-normal leading-tight text-black">
+                    <h4 className="serif text-[28px] font-normal leading-tight text-black">
                       {s.t}
-                    </h3>
+                    </h4>
                     <p className="mt-3 text-[16px] leading-[1.8] text-[var(--muted)]">{s.d}</p>
                     <p className="mt-4 text-[15px] leading-[1.8] text-[var(--muted)]">
                       For: {s.who}
@@ -674,9 +680,8 @@ function App() {
               </h2>
               <p className="mt-6 max-w-[620px] text-[18px] leading-[1.8] text-[#EDEDEA]/90">
                 If you hold, are acquiring, insuring, importing or advising on a vehicle that normal
-                valuation cannot describe, we are here for that assignment. Tell us about the
-                vehicle, and the decision ahead. We will help you understand what the evidence
-                supports.
+                valuation cannot describe, tell us the decision you need to make. We will help you
+                understand what the evidence can support.
               </p>
               <p className="serif mt-8 text-[24px] italic text-[var(--gold)]">
                 ADVERSIQ. Evidence in context.
@@ -826,10 +831,6 @@ function App() {
 
       <footer className="granite border-t border-white/10 px-4 py-10 text-center text-[#F2EFE9] sm:px-6 lg:px-8">
         <p className="serif text-[clamp(42px,7vw,96px)] leading-none tracking-[10px]">ADVERSIQ</p>
-        <p className="mx-auto mt-6 max-w-[900px] text-[12px] uppercase leading-[1.9] tracking-[0.12em]">
-          brayden@adversiq.xyz — +63 960 835 4283 — Box Hill South, Victoria, Australia — Reports
-          written in the Philippines — ABN 55 978 113 300
-        </p>
         <p className="mt-4 text-[12px] uppercase tracking-[0.12em]">
           <a href={PRODUCT_HREF} target="_blank" rel="noopener" className="underline">
             {PRODUCT_NAME}
