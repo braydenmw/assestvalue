@@ -4,6 +4,8 @@ import heroUrl from "./assets/hero-vehicle.jpg";
 import specialisationImageUrl from "./assets/specialisation-why.jpg";
 import audienceImageUrl from "./assets/market-significance.webp";
 import audienceBackdropUrl from "./assets/melbourne-coastal-vehicles.webp";
+import specialisationSilhouetteUrl from "./assets/specialisation-silhouette.webp";
+import worldwideSilhouetteUrl from "./assets/worldwide-silhouette.jpg";
 import aboutUrl from "./assets/cd05e7186820a95e-image_20261111_182933.webp";
 import contactImageUrl from "./assets/contact-vehicle.jpg";
 
@@ -230,10 +232,23 @@ function App() {
 
       {/* SPECIALISATION */}
       <section
-        className="bg-[var(--bone)] py-[112px] sm:py-[144px]"
+        className="relative isolate overflow-hidden bg-[var(--bone)] py-[112px] sm:py-[144px]"
         aria-label="What we specialise in"
       >
-        <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <img
+          src={specialisationSilhouetteUrl}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute right-[-24%] top-1/2 z-0 w-[145%] max-w-none -translate-y-1/2 grayscale opacity-[0.24] sm:right-[-12%] sm:w-[105%] lg:right-[-5%] lg:w-[82%] lg:max-w-[1100px]"
+          style={{
+            mixBlendMode: "screen",
+            maskImage:
+              "radial-gradient(ellipse at 62% 48%, #000 20%, rgba(0, 0, 0, 0.9) 54%, transparent 82%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse at 62% 48%, #000 20%, rgba(0, 0, 0, 0.9) 54%, transparent 82%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-8">
             <Reveal>
               <p className="eyebrow">What we specialise in</p>
@@ -442,9 +457,22 @@ function App() {
       {/* WORLDWIDE APPLICATION */}
       <section
         id="global"
-        className="border-t border-[#D8D0BE] bg-[var(--bone)] py-[112px] sm:py-[144px]"
+        className="relative isolate overflow-hidden border-t border-[#D8D0BE] bg-[var(--bone)] py-[112px] sm:py-[144px]"
       >
-        <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <img
+          src={worldwideSilhouetteUrl}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 right-[-24%] z-0 w-[145%] max-w-none opacity-[0.32] sm:right-[-12%] sm:w-[105%] lg:right-[-5%] lg:w-[82%] lg:max-w-[1100px]"
+          style={{
+            mixBlendMode: "screen",
+            maskImage:
+              "radial-gradient(ellipse at 38% 48%, #000 20%, rgba(0, 0, 0, 0.9) 54%, transparent 82%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse at 38% 48%, #000 20%, rgba(0, 0, 0, 0.9) 54%, transparent 82%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-5">
             <Reveal>
               <p className="eyebrow">Worldwide application</p>
