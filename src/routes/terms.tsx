@@ -166,67 +166,21 @@ const TERMS = [
     ),
   },
   {
-    title: "7. Fees, Payment Terms & Multi-Asset Scope Commitment",
+    title: "7. Fees & Written Engagement",
     content: (
       <>
-        <h3 className="font-semibold">Fee Structure, Pricing & Asset Caps</h3>
-        <ul className="list-disc space-y-3 pl-6">
-          <li>
-            <strong>Individual Assignment Scope:</strong> All valuation assignments—whether desktop
-            evidence reviews, on-site physical verifications, or cross-border expert briefs—are
-            scoped and quoted individually on a <strong>Price on Application (POA)</strong> basis.
-            Quoted fees reflect each vehicle&apos;s rarity, provenance complexity, geographical
-            location, evidence requirements, and legal scope, and are subject to change prior to
-            formal contract execution.
-          </li>
-          <li>
-            <strong>Single-Vehicle Asset Fee Cap:</strong> For individual single-vehicle assignments
-            with an estimated open-market value exceeding <strong>USD $1,000,000</strong>, the
-            professional valuation fee is capped at a maximum of{" "}
-            <strong>USD $10,000 per asset</strong> (excluding international travel logistics,
-            diagnostic access, venue fees, or specialized laboratory/expert testing unless agreed in
-            writing).
-          </li>
-          <li>
-            <strong>Multi-Vehicle Assets & Collection Engagements:</strong> Where an assignment
-            requires the valuation of multiple vehicles (e.g., private collections, estate
-            divisions, multi-car import shipments, or corporate portfolios), fees are quoted under a
-            tailored <strong>Collection Engagement Schedule</strong>. Multi-asset pricing applies a
-            tiered fee structure to reflect shared inspection logistics while ensuring each vehicle
-            receives independent forensic market research.
-          </li>
-        </ul>
-        <h3 className="pt-2 font-semibold">Terms of Engagement & Payment Schedule</h3>
-        <ul className="list-disc space-y-3 pl-6">
-          <li>
-            <strong>Written Execution & Agreed Terms:</strong> All terms, travel itineraries,
-            multi-vehicle schedules, and logistical arrangements are agreed upon in writing first.
-            No work commences until a formal <strong>Written Engagement Letter</strong>—detailing
-            the exact scope, intended use, valuation basis, delivery timeline, itemized expenses,
-            and total fee structure—is signed and accepted by both parties.
-          </li>
-          <li>
-            <strong>No Hidden Charges:</strong> Once the engagement agreement is signed by both
-            parties, the quoted professional fee for the agreed manifest is fixed. There are{" "}
-            <strong>no hidden charges, surprises, or administrative add-ons</strong>.
-          </li>
-          <li>
-            <strong>Payment Schedule:</strong>
-            <ul className="mt-2 list-[circle] space-y-2 pl-6">
-              <li>
-                <strong>30% Deposit Upfront:</strong> A non-refundable deposit of{" "}
-                <strong>30% of the total agreed engagement fee</strong> (plus any upfront
-                international travel booking costs) is required prior to the commencement of
-                research, international travel booking, inspection scheduling, or document review.
-              </li>
-              <li>
-                <strong>70% Balance on Release:</strong> The remaining <strong>70% balance</strong>{" "}
-                is due upon completion and must be cleared prior to the formal digital or physical
-                release of the finalized valuation report(s).
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <h3 className="font-semibold">Separately Agreed Assignment Fees</h3>
+        <p>
+          Single-vehicle and multi-vehicle assignments are scoped and quoted separately. Fees are
+          based on the time spent researching the vehicles and preparing the valuation reports.
+        </p>
+        <h3 className="pt-2 font-semibold">Written Agreement Before Commencement</h3>
+        <p>
+          The scope and fee are agreed in writing before work begins. A formal{" "}
+          <strong>Written Engagement Letter</strong> sets out the agreed scope, intended use,
+          valuation basis, delivery timeline, itemized expenses and total fee, and must be accepted
+          by both parties before work commences.
+        </p>
       </>
     ),
   },

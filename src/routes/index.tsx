@@ -115,29 +115,25 @@ function App() {
     {
       title: "01 — Standard guides cannot do this work",
       paragraphs: [
-        "Price guides perform an important function when there are many similar examples to compare. They rely on volume, repetition and proximity.",
-        "Distinctive vehicles rarely offer those advantages. Comparables may be years apart, in different countries and under different conditions. Where direct comparisons are few, valuation becomes an exercise in evidence, reasoning and judgement—not a lookup.",
+        "Price guides work when many similar vehicles are available to compare. For rare or transformed vehicles, comparisons may be scarce or outdated—making valuation an exercise in evidence and judgement, not a lookup.",
       ],
     },
     {
       title: "02 — Distinctiveness must be proven",
       paragraphs: [
-        "Rarity alone does not create value. Modification alone does not establish a premium. What matters is evidence that buyers in the relevant market recognise and pay for that distinction.",
-        "We examine records, provenance, specification, condition and comparable market evidence to establish whether a premium is supported, and on what basis. If the evidence does not support it, we say so clearly and without equivocation.",
+        "Rarity or modification alone does not establish a premium. We assess whether provenance, specification, condition and market evidence support one—and say so when they do not.",
       ],
     },
     {
       title: "03 — The market is international",
       paragraphs: [
-        "Demand, availability and comparable transactions sit across borders. A vehicle may be located in Melbourne, offered in London, insured in Singapore, imported through customs in Dubai, and contested in an estate in Sydney.",
-        "We identify the market or markets relevant to the assignment and explain what the available evidence can—and cannot—support in terms that can be understood and relied upon across borders.",
+        "Demand and comparable sales cross borders. We identify the relevant market and explain what the available evidence can—and cannot—support.",
       ],
     },
     {
       title: "04 — The consequences are material",
       paragraphs: [
-        "These valuations support purchase, sale, relocation, import and export, insurance, estate and succession, legal and dispute matters, and collection management. An understated value leaves an owner exposed; an overstated value can mislead an insurer, buyer, court or customs authority.",
-        "Each report is prepared to an agreed scope: intended use, valuation basis, relevant market and effective date, with the reasoning, assumptions and limitations set out in full. Not to impress. To be defensible.",
+        "These valuations inform purchase, sale, insurance, estate, legal, cross-border and collection decisions. Each report sets out its agreed purpose, basis, evidence and limitations. Not to impress. To be defensible.",
       ],
     },
   ];
@@ -280,10 +276,10 @@ function App() {
       >
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <p className="eyebrow">Why this specialisation is necessary</p>
+            <p className="eyebrow">Why standard valuations fall short</p>
             <h2 className="serif mt-6 max-w-[980px] text-[clamp(40px,6vw,76px)] font-normal leading-[0.98] tracking-[-0.03em] text-black">
-              Not a lookup.{" "}
-              <em className="italic text-[var(--gold-deep)]">Evidence, reasoning and judgement.</em>
+              Standard guides rely on comparables.{" "}
+              <em className="italic text-[var(--gold-deep)]">Distinctive vehicles require more.</em>
             </h2>
           </Reveal>
           <div className="mt-14">
@@ -372,71 +368,60 @@ function App() {
       <section id="services" className="border-t border-[#D8D0BE] bg-[var(--bone)] py-[160px]">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="mx-auto max-w-[900px] text-center">
-              <p className="eyebrow">Who we do it for</p>
-              <h2 className="serif mt-6 text-[clamp(36px,4.5vw,56px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
-                For owners who require an independent{" "}
-                <em className="italic text-[var(--gold-deep)]">evidence-led view.</em>
-              </h2>
-              <p className="mx-auto mt-5 max-w-[760px] text-[18px] leading-[1.8]">
-                We work for collectors, owners who value significance, and owners seeking clarity.
-              </p>
-              <p className="mx-auto mt-4 max-w-[980px] text-[16px] leading-[1.8] text-[var(--muted)]">
-                We also act for buyers, brokers, insurers, lawyers, executors, importers, exporters
-                and customs professionals who require an informed, independent basis for decision.
-              </p>
-              {service && (
-                <p className="mt-6 inline-block border-b border-[var(--gold)] pb-1 text-[14px] font-bold text-black">
-                  Selected service: {service} — added to the enquiry form below.
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+              <div className="lg:col-span-7">
+                <p className="eyebrow">Who we do it for</p>
+                <h2 className="serif mt-6 max-w-[760px] text-[clamp(36px,4.5vw,56px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
+                  Independent valuation for owners—and the professionals who advise them.
+                </h2>
+              </div>
+              <div className="lg:col-span-5">
+                <p className="text-[18px] leading-[1.8]">
+                  From collectors and private owners to buyers, brokers, insurers, lawyers,
+                  executors, importers, exporters and customs professionals, we provide an
+                  independent basis for decisions involving distinctive vehicles.
                 </p>
-              )}
+                {service && (
+                  <p className="mt-6 inline-block border-b border-[var(--gold)] pb-1 text-[14px] font-bold text-black">
+                    Selected service: {service} — added to the enquiry form below.
+                  </p>
+                )}
+              </div>
             </div>
           </Reveal>
           <Reveal>
-            <div className="mt-12 grid gap-8 lg:grid-cols-12">
-              <div className="grid gap-px border border-white/15 bg-white/15 md:grid-cols-3 lg:col-span-8">
-                {[
-                  [
-                    "For collectors",
-                    "An independent record of what makes a vehicle distinct—for insurance, sale, estate, succession or portfolio management, and when substantiation is requested.",
-                  ],
-                  [
-                    "For owners who value significance",
-                    "For those who have acquired, preserved, restored or transformed a vehicle of particular character, and need that character understood on its merits rather than reduced to a generic comparable.",
-                  ],
-                  [
-                    "For owners seeking clarity",
-                    "For those who believe their vehicle is something more than a car but need independent evidence to articulate that position to an insurer, buyer, court or customs authority.",
-                  ],
-                ].map(([title, description]) => (
-                  <article key={title} className="bg-[var(--paper)] p-7 sm:p-9">
-                    <h3 className="serif text-[23px] font-normal text-[var(--text)]">{title}</h3>
-                    <p className="mt-4 text-[15px] leading-[1.8] text-[var(--muted)]">
-                      {description}
-                    </p>
-                  </article>
-                ))}
-              </div>
-              <figure className="granite relative m-0 min-h-[400px] overflow-hidden border border-[var(--gold)] lg:col-span-4">
+            <div className="mt-14 grid gap-6 lg:grid-cols-12 lg:items-stretch">
+              <article className="flex flex-col justify-center border border-[#D8D0BE] bg-[var(--paper)] p-8 sm:p-10 lg:col-span-5 lg:p-12">
+                <p className="eyebrow">Independent by design</p>
+                <h3 className="serif mt-6 text-[clamp(30px,3.4vw,42px)] font-normal leading-[1.06] tracking-[-0.02em] text-black">
+                  A clear purpose. An independent opinion.
+                </h3>
+                <p className="mt-6 text-[16px] leading-[1.8] text-[var(--muted)]">
+                  We define the valuation&apos;s scope and intended use so the question being
+                  answered is clear. We take no sides: we assess the vehicle and available evidence
+                  to form an impartial opinion of its value as at the valuation date.
+                </p>
+              </article>
+              <figure className="granite relative m-0 min-h-[440px] overflow-hidden border border-[var(--gold)] lg:col-span-7">
                 <img
                   src={audienceSilhouetteUrl}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 h-full w-full object-contain object-top opacity-30 grayscale"
-                  style={{ filter: "grayscale(1) brightness(1.8)", mixBlendMode: "screen" }}
+                  className="absolute inset-0 h-full w-full object-cover object-center opacity-20 grayscale"
+                  style={{ filter: "grayscale(1) brightness(1.5)", mixBlendMode: "screen" }}
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-[#090B0E]/80 via-[#090B0E]/20 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-[#090B0E]/75 via-[#090B0E]/15 to-transparent"
                 />
                 <p className="absolute left-5 top-5 z-10 max-w-[120px] text-[11px] font-bold uppercase leading-relaxed tracking-[0.18em] text-[var(--gold)]">
                   Distinctive by design
                 </p>
-                <div className="absolute bottom-0 right-0 z-10 w-[90%] border-l border-t border-[var(--gold)] bg-[#090B0E] p-2">
+                <div className="absolute bottom-5 right-5 z-10 w-[88%] border-l border-t border-[var(--gold)] bg-[#090B0E] p-2 sm:bottom-8 sm:right-8 sm:w-[82%]">
                   <img
                     src={audienceImageUrl}
                     alt="Rear detail of a dark supercar with pink and yellow paint splashes"
-                    className="h-[210px] w-full object-cover object-center"
+                    className="h-[240px] w-full object-cover object-center sm:h-[320px]"
                   />
                 </div>
               </figure>
@@ -510,20 +495,36 @@ function App() {
             <Reveal>
               <p className="eyebrow">Why ADVERSIQ</p>
               <h2 className="serif mt-6 text-[clamp(36px,5vw,64px)] font-normal leading-[1.02] tracking-[-0.03em] text-black">
-                For the owner who knows their vehicle is something more than a car—but needs
-                independent evidence to prove it.
+                Clear fees, agreed before work begins.
               </h2>
-              <p className="mt-8 max-w-[820px] text-[20px] leading-[1.8] text-[var(--muted)]">
-                For the collector who needs substantiation. For the owner who has preserved
-                something of significance. For the owner who is unsure how to justify what they
-                hold.
+              <p className="mt-8 text-[18px] leading-[1.8] text-[var(--muted)]">
+                Single-vehicle and multi-vehicle assignments are scoped and quoted separately. Fees
+                are based on the time required to research the vehicles and prepare the reports.
               </p>
-              <p className="mt-5 max-w-[820px] text-[20px] leading-[1.8] text-[var(--muted)]">
-                We provide that substantiation—independently, as specialists, and evidence-led.
+              <p className="mt-5 text-[18px] leading-[1.8] text-[var(--muted)]">
+                The scope and fee are agreed in writing before work begins.
               </p>
-              <p className="serif mt-10 border-l-2 border-[var(--gold)] pl-6 text-[clamp(26px,3vw,36px)] italic leading-snug text-black">
-                ADVERSIQ — Evidence in context.
-              </p>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                <article className="border-t border-[var(--gold)] pt-4">
+                  <h3 className="serif text-[22px] font-normal text-black">Separate quotations</h3>
+                  <p className="mt-2 text-[15px] leading-[1.7] text-[var(--muted)]">
+                    Each single-vehicle or multi-vehicle assignment is priced separately according
+                    to the research and report preparation required.
+                  </p>
+                </article>
+                <article className="border-t border-[var(--gold)] pt-4">
+                  <h3 className="serif text-[22px] font-normal text-black">Agreed in writing</h3>
+                  <p className="mt-2 text-[15px] leading-[1.7] text-[var(--muted)]">
+                    The scope and fee are confirmed in writing before any work commences.
+                  </p>
+                </article>
+              </div>
+              <a
+                href="/terms#terms-7"
+                className="mt-6 inline-block text-[14px] font-bold text-black underline underline-offset-4 hover:text-[var(--gold-deep)]"
+              >
+                Full fee and engagement terms
+              </a>
             </Reveal>
           </div>
         </div>
