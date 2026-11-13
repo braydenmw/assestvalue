@@ -25,7 +25,7 @@ const TERMS = [
     ),
   },
   {
-    title: "2. Scope, Valuation Date & Standards Compliance",
+    title: "2. Scope, Valuation Date & Applicable Requirements",
     content: (
       <>
         <p>
@@ -34,31 +34,17 @@ const TERMS = [
           constitute a legal guarantee of a sale price, loan approval, insurance claim payout,
           customs duty determination, or statutory tax assessment.
         </p>
-        <h3 className="pt-2 font-semibold">Self-Certified Standards Compliance</h3>
+        <h3 className="pt-2 font-semibold">Valuation Principles & Applicable Requirements</h3>
         <p>
-          While ADVERSIQ operates as an independent specialist practice, all valuation assignments
-          are self-certified to align with recognized international valuation frameworks:
+          Reports are prepared to an agreed scope, with reference to generally recognised valuation
+          principles including objectivity, market evidence, and analytical transparency. Each
+          report states its agreed purpose, basis, evidence, assumptions, and limitations.
         </p>
-        <ul className="list-disc space-y-3 pl-6">
-          <li>
-            <strong>International Valuation Standards (IVS):</strong> Operating in adherence with{" "}
-            <strong>IVS 220 (Non-Financial Assets / Plant and Equipment)</strong> principles
-            governing objectivity, market evidence, and analytical transparency.
-          </li>
-          <li>
-            <strong>Statutory Expert Witness Codes:</strong> Compliant with expert witness duty
-            declarations across key jurisdictions, including{" "}
-            <strong>Section 79 of the Australia Evidence Act 1995</strong>,{" "}
-            <strong>Civil Procedure Rules (CPR Part 35) in the United Kingdom</strong>, and{" "}
-            <strong>Rule 130, Section 49 of the Philippines Rules of Court</strong>.
-          </li>
-          <li>
-            <strong>Cross-Border Customs Standards:</strong> Aligning fallback valuation
-            methodologies with{" "}
-            <strong>World Trade Organization (WTO) Customs Valuation Agreement Method 6</strong>{" "}
-            framework rules.
-          </li>
-        </ul>
+        <p>
+          Report suitability depends on the requirements of the relevant court, insurer, customs
+          authority, or other decision-maker. Applicable standards vary by jurisdiction and intended
+          use.
+        </p>
         <p>
           Vehicle values and secondary markets fluctuate dynamically. Reports speak strictly as of
           their stated effective valuation date. Any period during which a report may be relied on
@@ -71,28 +57,28 @@ const TERMS = [
     ),
   },
   {
-    title: "3. Evidentiary Standards & Self-Certified Rigor",
+    title: "3. Evidence, Analysis & Impartiality",
     content: (
       <>
         <p>
-          ADVERSIQ focuses on one-off, limited-production, coachbuilt and substantially transformed
-          vehicles that can be difficult to compare with standard models. We document the vehicle
-          and assess relevant market evidence, making any unsupported records or assumptions clear:
+          ADVERSIQ assesses the available records, specification, condition, provenance, and
+          relevant market evidence within the agreed scope. Missing or unverified information is
+          identified as a limitation rather than treated as established fact.
         </p>
         <ul className="list-disc space-y-3 pl-6">
           <li>
-            <strong>Analytical Limitation Protocol:</strong> Undocumented modifications, missing
-            build records, or unverified provenance are treated as explicit analytical
-            limitations—never filled with speculative assumptions.
+            <strong>Records and limitations:</strong> Undocumented modifications, missing build
+            records, or unverified provenance may limit the opinion and are identified in the
+            report.
           </li>
           <li>
-            <strong>Empirical Market Research:</strong> Valuation conclusions are grounded in
-            verified global transaction data, secondary market liquidity analysis, and technical
-            build verification rather than face-value asking prices or raw construction receipts.
+            <strong>Market evidence:</strong> Comparisons and transactions are assessed in context.
+            Asking prices or construction receipts alone do not establish market value.
           </li>
           <li>
             <strong>Impartiality:</strong> Appraisals reflect open-market evidence and defined
-            standards, adhering strictly to an overriding duty of impartiality.
+            scope. ADVERSIQ does not sell, broker, or place vehicles, and does not advocate for a
+            preferred outcome.
           </li>
         </ul>
       </>
