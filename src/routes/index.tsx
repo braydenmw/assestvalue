@@ -196,7 +196,7 @@ function App() {
             style={{ textShadow: "0 2px 5px rgba(0, 0, 0, 0.85)" }}
           >
             <p className="eyebrow !text-[var(--gold)]">
-              Independent specialist vehicle valuation · Melbourne · International
+              Independent specialist vehicle valuation. Melbourne. International.
             </p>
             <h2 className="serif mt-4 text-[25px] font-normal text-white">Evidence in context</h2>
             <p className="mt-5 text-[16px] leading-[1.7] text-white/95 sm:text-[17px]">
@@ -228,7 +228,7 @@ function App() {
           </div>
         </Reveal>
         <p className="vertical-text absolute bottom-8 right-5 hidden text-[12px] font-bold uppercase tracking-[0.22em] text-white/80 md:block">
-          Adversiq — Est. Melbourne
+          Adversiq. Est. Melbourne
         </p>
       </section>
 
@@ -368,18 +368,21 @@ function App() {
       <section id="services" className="border-t border-[#D8D0BE] bg-[var(--bone)] py-[160px]">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-              <div className="lg:col-span-7">
+            <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-6">
                 <p className="eyebrow">Who we do it for</p>
-                <h2 className="serif mt-6 max-w-[760px] text-[clamp(36px,4.5vw,56px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
+                <h2 className="serif mt-6 max-w-[640px] text-[clamp(36px,4.2vw,52px)] font-normal leading-[1.0] tracking-[-0.02em] text-black">
                   Independent valuation for owners—and the professionals who advise them.
                 </h2>
-              </div>
-              <div className="lg:col-span-5">
-                <p className="text-[18px] leading-[1.8]">
+                <p className="mt-6 text-[18px] leading-[1.8]">
                   From collectors and private owners to buyers, brokers, insurers, lawyers,
-                  executors, importers, exporters and customs professionals, we provide an
-                  independent basis for decisions involving distinctive vehicles.
+                  executors, importers, exporters and customs professionals, we provide a clear
+                  basis for decisions involving distinctive vehicles.
+                </p>
+                <p className="mt-5 text-[16px] leading-[1.8] text-[var(--muted)]">
+                  We define the valuation&apos;s scope and intended use so the question being
+                  answered is clear. We take no sides: we assess the vehicle and available evidence
+                  to form an impartial opinion of its value as at the valuation date.
                 </p>
                 {service && (
                   <p className="mt-6 inline-block border-b border-[var(--gold)] pb-1 text-[14px] font-bold text-black">
@@ -387,22 +390,7 @@ function App() {
                   </p>
                 )}
               </div>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="mt-14 grid gap-6 lg:grid-cols-12 lg:items-stretch">
-              <article className="flex flex-col justify-center border border-[#D8D0BE] bg-[var(--paper)] p-8 sm:p-10 lg:col-span-5 lg:p-12">
-                <p className="eyebrow">Independent by design</p>
-                <h3 className="serif mt-6 text-[clamp(30px,3.4vw,42px)] font-normal leading-[1.06] tracking-[-0.02em] text-black">
-                  A clear purpose. An independent opinion.
-                </h3>
-                <p className="mt-6 text-[16px] leading-[1.8] text-[var(--muted)]">
-                  We define the valuation&apos;s scope and intended use so the question being
-                  answered is clear. We take no sides: we assess the vehicle and available evidence
-                  to form an impartial opinion of its value as at the valuation date.
-                </p>
-              </article>
-              <figure className="granite relative m-0 min-h-[440px] overflow-hidden border border-[var(--gold)] lg:col-span-7">
+              <figure className="granite relative m-0 min-h-[440px] overflow-hidden border border-[var(--gold)] sm:min-h-[520px] lg:col-span-6">
                 <img
                   src={audienceSilhouetteUrl}
                   alt=""
@@ -493,32 +481,15 @@ function App() {
           </figure>
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="eyebrow">Why ADVERSIQ</p>
+              <p className="eyebrow">Fees</p>
               <h2 className="serif mt-6 text-[clamp(36px,5vw,64px)] font-normal leading-[1.02] tracking-[-0.03em] text-black">
                 Clear fees, agreed before work begins.
               </h2>
               <p className="mt-8 text-[18px] leading-[1.8] text-[var(--muted)]">
                 Single-vehicle and multi-vehicle assignments are scoped and quoted separately. Fees
-                are based on the time required to research the vehicles and prepare the reports.
+                are based on the time required to research the vehicles and prepare the reports,
+                with the scope and fee agreed in writing before work begins.
               </p>
-              <p className="mt-5 text-[18px] leading-[1.8] text-[var(--muted)]">
-                The scope and fee are agreed in writing before work begins.
-              </p>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                <article className="border-t border-[var(--gold)] pt-4">
-                  <h3 className="serif text-[22px] font-normal text-black">Separate quotations</h3>
-                  <p className="mt-2 text-[15px] leading-[1.7] text-[var(--muted)]">
-                    Each single-vehicle or multi-vehicle assignment is priced separately according
-                    to the research and report preparation required.
-                  </p>
-                </article>
-                <article className="border-t border-[var(--gold)] pt-4">
-                  <h3 className="serif text-[22px] font-normal text-black">Agreed in writing</h3>
-                  <p className="mt-2 text-[15px] leading-[1.7] text-[var(--muted)]">
-                    The scope and fee are confirmed in writing before any work commences.
-                  </p>
-                </article>
-              </div>
               <a
                 href="/terms#terms-7"
                 className="mt-6 inline-block text-[14px] font-bold text-black underline underline-offset-4 hover:text-[var(--gold-deep)]"
@@ -624,8 +595,7 @@ function App() {
             <Reveal>
               <p className="eyebrow !text-[var(--gold)]">Begin a Conversation</p>
               <h2 className="serif mt-6 text-[clamp(36px,4.5vw,56px)] font-normal leading-[1.08] tracking-[-0.02em]">
-                Tell us about the vehicle—and{" "}
-                <em className="italic text-[var(--gold)]">the decision</em> ahead.
+                Tell us about the vehicle, and the decision ahead.
               </h2>
               <p className="mt-6 max-w-[620px] text-[18px] leading-[1.8] text-[#EDEDEA]/90">
                 If you have something special but are not sure how to prove it is more than a car,
