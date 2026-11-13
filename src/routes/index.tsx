@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroUrl from "./assets/hero-vehicle.jpg";
 import specialisationImageUrl from "./assets/specialisation-why.jpg";
-import audienceImageUrl from "./assets/audience-photo.jpg";
-import audienceSilhouetteUrl from "./assets/audience-silhouette.jpg";
+import audienceImageUrl from "./assets/market-significance.webp";
+import audienceBackdropUrl from "./assets/melbourne-coastal-vehicles.webp";
 import aboutUrl from "./assets/cd05e7186820a95e-image_20261111_182933.webp";
 import contactImageUrl from "./assets/contact-vehicle.jpg";
 
@@ -371,7 +371,7 @@ function App() {
             </div>
             <figure className="granite relative m-0 min-h-[440px] overflow-hidden border border-[var(--gold)] sm:min-h-[520px] lg:col-span-5">
               <img
-                src={audienceSilhouetteUrl}
+                src={audienceBackdropUrl}
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 h-full w-full object-cover object-center opacity-20 grayscale"
@@ -387,7 +387,7 @@ function App() {
               <div className="absolute bottom-5 right-5 z-10 w-[88%] border-l border-t border-[var(--gold)] bg-[#090B0E] p-2 sm:bottom-8 sm:right-8 sm:w-[82%]">
                 <img
                   src={audienceImageUrl}
-                  alt="Rear detail of a dark supercar with pink and yellow paint splashes"
+                  alt="Rear view of a black supercar with pink and yellow paint splashes behind it"
                   className="h-[240px] w-full object-cover object-center sm:h-[320px]"
                 />
               </div>
